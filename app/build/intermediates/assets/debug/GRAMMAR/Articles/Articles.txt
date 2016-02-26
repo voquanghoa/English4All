@@ -1,4 +1,0 @@
-A or An
-A_or_An
-A or An or The
-A_or_An_or_The
