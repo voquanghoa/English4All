@@ -25,6 +25,7 @@ public class FileSelectAdapter extends BaseAdapter {
     private List<DataItem> children;
     private Stack<DataItem> pathStack;
     private FileSelectFeedback selectFeedback;
+
     public FileSelectAdapter(Context context, DataItem dataItem, FileSelectFeedback selectFeedback){
         setDisplayDataItem(dataItem);
         this.context = context;
