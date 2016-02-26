@@ -1,0 +1,35 @@
+7. He has <u><font color='red'>done</font></u> a <u><font color='red'>valuable</font></u> contribution <u><font color='red'>to</font></u> the independence <u><font color='red'>of</font></u> the country.
+ done
+valuable
+to
+of
+
+8. While he <u><font color='red'>watched</font></u> TV last night, a cat <u><font color='red'>ran</font></u> <u><font color='red'>across</font></u> <u><font color='red'>the</font></u> floor.
+ watched
+ran
+across
+the
+
+9. Children! It<u><font color='red'>'s high time</font></u> <u><font color='red'>for you</font></u> <u><font color='red'>should tidy</font></u> away <u><font color='red'>those toys</font></u>!
+'s high time
+for you
+ should tidy
+those toys
+
+7. How <u><font color='red'>about</font></u> taking <u><font color='red'>some time off</font></u>, Jim? You <u><font color='red'>were working</font></u> too hard lately. <u><font color='red'>Take</font></u> a short vacation.
+about
+some time off
+ were working
+Take
+
+8. <u><font color='red'>Unless</font></u> his candidate <u><font color='red'>had won</font></u> the election, he <u><font color='red'>would be</font></u> happy <u><font color='red'>now</font></u>.
+ Unless
+had won
+would be
+now
+
+9. Alfred's eyes <u><font color='red'>burned</font></u> and his shoulders <u><font color='red'>ached</font></u>. He <u><font color='red'>has been sitting</font></u> at the computer for 6 straight hours. Finally, he <u><font color='red'>took</font></u> a break.
+burned
+ached
+ has been sitting
+took

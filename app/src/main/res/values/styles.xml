@@ -1,0 +1,83 @@
+<resources>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+
+    <style name="MainMenuItemRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">180</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="MainMenuItemIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+    <style name="MainMenuItemButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_margin">@dimen/main_menu_new_button_margin</item>
+    </style>
+    <style name="CategoryButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/list_item_button_margin</item>
+        <item name="android:layout_marginRight">@dimen/list_item_button_margin</item>
+        <item name="android:textSize">26dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:background">@drawable/btn_blue</item>
+    </style>
+    <style name="FolderItemText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    <style name="RowItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/list_item_height</item>
+        <item name="android:paddingBottom">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:paddingTop">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:paddingLeft">@dimen/list_item_padding_left_right</item>
+        <item name="android:paddingRight">@dimen/list_item_padding_left_right</item>
+    </style>
+    <style name="QuestionText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="AppTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/app_title_height</item>
+    </style>
+
+    <style name="AppTitleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_title_text</item>
+        <item name="android:textSize">@dimen/app_title_font_size</item>
+    </style>
+    <style name="AdsPanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+</resources>

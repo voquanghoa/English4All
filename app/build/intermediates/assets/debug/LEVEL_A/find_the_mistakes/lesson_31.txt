@@ -1,0 +1,35 @@
+6. "What <u><font color='red'>is</font></u> <u><font color='red'>your</font></u> <u><font color='red'>name</font></u>?" "<u><font color='red'>Your</font></u> name is Susan Pike."
+is
+your
+ Your
+name
+
+7. "<u><font color='red'>What's</font></u> <u><font color='red'>he</font></u> name?" "<u><font color='red'>He</font></u> <u><font color='red'>is</font></u> Tom."
+What's
+ he
+He
+is
+
+8. You are <u><font color='red'>a doctor</font></u>. Mr. Allen is a <u><font color='red'>doctor</font></u>, too. <u><font color='red'>We're</font></u> both <u><font color='red'>doctors</font></u>.
+a doctor
+doctor
+ We're
+doctors
+
+6. <u><font color='red'>Don't buy</font></u> <u><font color='red'>any</font></u> bread at the shops. There <u><font color='red'>are</font></u> <u><font color='red'>a lot</font></u> in the kitchen.
+Don't buy
+any
+ are
+a lot
+
+7. "<u><font color='red'>Where</font></u> does Tom <u><font color='red'>go</font></u> to Spain every summer?" "<u><font color='red'>Because</font></u> he <u><font color='red'>likes</font></u> hot weather in Spain."
+ Where
+go
+Because
+likes
+
+8. <u><font color='red'>How</font></u> <u><font color='red'>much</font></u> water <u><font color='red'>do</font></u> he drink <u><font color='red'>a day</font></u>?
+How
+much
+ do
+a day

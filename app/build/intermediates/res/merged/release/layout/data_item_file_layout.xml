@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RowItemStyle"
+    android:id="@+id/file_data_item_select_layout"
+    >
+    <ImageView
+        android:id="@+id/row_icon"
+        android:layout_width="@dimen/list_icon_size"
+        android:layout_height="@dimen/list_icon_size"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/test_english_icon"
+        />
+    <TextView
+        android:id="@+id/button_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:text="Button"
+        android:layout_toRightOf="@+id/row_icon"
+        android:layout_toLeftOf="@+id/text_badge"
+        style="@style/FolderItemText"
+        />
+    <TextView
+        android:id="@+id/text_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="8/10"
+        android:layout_alignParentRight="true"
+        android:textColor="#fff"
+        android:background="@drawable/green_badge"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        />
+</RelativeLayout>
+<!-- From: file:/F:/Soure_lam_app/Lamviec/Lamviec/Lamviec/List_view_Object/app/src/main/res/layout/data_item_file_layout.xml -->

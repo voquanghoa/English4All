@@ -1,0 +1,59 @@
+7. During the <u><font color='red'>bleak</font></u> winter, food became <u><font color='red'>too</font></u> scarce that <u><font color='red'>starvation</font></u> and famine were <u><font color='red'>widespread</font></u>.
+bleak
+ too
+starvation
+widespread
+
+8. <u><font color='red'>Transplanting</font></u> organs <u><font color='red'>such</font></u> hearts and kidneys has <u><font color='red'>proved</font></u> easier than translating <u><font color='red'>muscles</font></u>.
+Transplanting
+ such
+proved
+muscles
+
+9. The grenade is a small bomb <u><font color='red'>done</font></u> to be thrown by <u><font color='red'>hand</font></u> <u><font color='red'>or</font></u> shot from <u><font color='red'>a</font></u> modified rifle.
+ done
+hand	
+or
+a
+
+10. The <u><font color='red'>high</font></u> cost of testing new pesticides <u><font color='red'>inadvertently</font></u> discourages the <u><font color='red'>develop</font></u> of viruses, protozoa, bacteria, and <u><font color='red'>molds</font></u> for pest control.
+high
+inadvertently
+ develop
+molds
+
+11. California, with <u><font color='red'>a population</font></u> of <u><font color='red'>more</font></u> than 23 million, is <u><font color='red'>the more</font></u> <u><font color='red'>populous</font></u> state in America.
+a population	
+more
+ the more
+populous
+
+7. The gorilla is <u><font color='red'>much</font></u> <u><font color='red'>in danger of</font></u> <u><font color='red'>extinction</font></u> <u><font color='red'>as</font></u> is the giant tortoise.
+ much
+in danger of
+extinction
+as
+
+8. <u><font color='red'>Which plant</font></u> <u><font color='red'>is</font></u> <u><font color='red'>the</font></u> <u><font color='red'>hardier</font></u> to survive a long, dry summer: the ivy, the fern, or the cactus?
+Which plant
+is
+the
+ hardier
+
+9. Although Mark <u><font color='red'>has been cooking</font></u> for many years, he <u><font color='red'>still</font></u> doesn't <u><font color='red'>know to</font></u> prepare French foods <u><font color='red'>in the traditional manner</font></u>.
+has been cooking	
+still
+ know to
+in the traditional manner
+
+10. <u><font color='red'>Visitors</font></u> were not permitted <u><font color='red'>entering</font></u> the park after dark <u><font color='red'>because of</font></u> the lack <u><font color='red'>of</font></u> security and lighting.
+Visitors
+ entering
+because of	
+of
+
+11. Louie got his sister <u><font color='red'>read</font></u> his class assignment, and then asked her <u><font color='red'>to write</font></u> the report <u><font color='red'>for him because</font></u> he did not have <u><font color='red'>enough time</font></u>.
+ read
+to write
+for him because
+enough time

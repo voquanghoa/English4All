@@ -1,0 +1,39 @@
+1. computer
+ Countable
+Non_Countable
+ 
+2. clock
+ Countable
+Non_Countable
+
+3. hat
+ Countable
+Non_Countable
+
+4. answer
+ Countable
+Non_Countable
+
+5. cup
+ Countable
+Non_Countable
+
+6. baby
+ Countable
+Non_Countable
+
+7. garden
+ Countable
+Non_Countable
+
+8. keyboard
+ Countable
+Non_Countable
+
+9. word
+ Countable
+Non_Countable
+
+10. game
+ Countable
+Non_Countable

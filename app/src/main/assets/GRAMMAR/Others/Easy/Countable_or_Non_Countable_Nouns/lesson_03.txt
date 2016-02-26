@@ -1,0 +1,39 @@
+1. window
+ Countable
+Non_Countable
+ 
+2. coal
+Countable
+ Non_Countable
+
+3. camera
+ Countable
+Non_Countable
+
+4. bag
+ Countable
+Non_Countable
+
+5. ice
+Countable
+ Non_Countable
+
+6. problem
+ Countable
+Non_Countable
+
+7. daughter
+ Countable
+Non_Countable
+
+8. fork
+ Countable
+Non_Countable
+
+9. dress
+ Countable
+Non_Countable
+
+10. juice
+Countable
+ Non_Countable

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_menu_new_button_margin">10dp</dimen>
+    <dimen name="main_menu_padding">10dp</dimen>
+    <dimen name="list_item_height">60dp</dimen>
+    <dimen name="list_item_button_margin">10dp</dimen>
+    <dimen name="list_icon_size">50dp</dimen>
+    <dimen name="list_item_padding_left_right">10dp</dimen>
+    <dimen name="list_item_padding_top_bottom">2dp</dimen>
+
+    <dimen name="app_title_height">50dp</dimen>
+    <dimen name="app_title_font_size">20sp</dimen>
+    <dimen name="app_title_icon_space">20dp</dimen>
+    <dimen name="app_title_padding">5dp</dimen>
+    <dimen name="app_title_text_space">10dp</dimen>
+
+    <dimen name="row_button_height">50dp</dimen>
+    <dimen name="question_margin_bottom">5dp</dimen>
+    <dimen name="question_margin_top">2dp</dimen>
+</resources>

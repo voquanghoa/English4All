@@ -1,0 +1,35 @@
+8. At present, I am a student <u><font color='red'>at</font></u> the Local Technical College, <u><font color='red'>which</font></u> I <u><font color='red'>am studying</font></u> <u><font color='red'>English part-time</font></u>.
+at
+ which
+am studying
+English part-time
+
+9. One of <u><font color='red'>the girl</font></u> <u><font color='red'>who</font></u> <u><font color='red'>worked</font></u> in that company <u><font color='red'>died</font></u>.
+ the girl
+who
+worked
+died
+
+10. This lesson <u><font color='red'>is</font></u> <u><font color='red'>such</font></u> long <u><font color='red'>that</font></u> I <u><font color='red'>have written</font></u> it for 30 minutes.
+is
+ such
+that
+have written
+
+8. When Guilliver <u><font color='red'>woke up</font></u> he <u><font color='red'>found</font></u> himself in a country <u><font color='red'>what</font></u> very small people <u><font color='red'>lived</font></u>.
+woke up
+found
+ what
+lived
+
+9. It <u><font color='red'>is believed</font></u> that the <u><font color='red'>wanted</font></u> man <u><font color='red'>was living</font></u> <u><font color='red'>in</font></u> London.
+is believed
+wanted
+ was living
+in
+
+10. The letter <u><font color='red'>was typed</font></u> <u><font color='red'>clear and careful</font></u>, but <u><font color='red'>without</font></u> <u><font color='red'>any</font></u> address or signature.
+was typed
+ clear and careful
+without
+any

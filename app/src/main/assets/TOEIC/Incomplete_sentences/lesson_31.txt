@@ -1,0 +1,59 @@
+Brian Moran writes in SQL Server Magazine (March 2005) that an interesting battle is taking ....... between Microsoft and Oracle, two titans of the database world, and the prize is business-application software.
+form 
+part 
+ shape
+stage
+
+Pricing for databases and prices for high-end business-application software can be ....... entwined when a vendor controls both the business layer software and the database.
+inevitably 
+ inexorably 
+inevitably 
+irrevocably
+
+Vendors who sell both have a lot more margin to ....... with and can be a lot more creative about how they price a total package for customers.
+control 
+deal 
+ play 
+sell
+
+Microsoft and Oracle are ....... competitors in the database space; competition in other areas inevitably has an effect on their database competitions.
+febrile 
+fiendish 
+ fierce 
+fleet
+
+Earlier this year, Oracle (the second largest provider of business application software) merged with PeopleSoft (the third largest provider), which had already ....... J. D. Edwards (another major provider) back in 2003.
+engorged 
+gulped 
+inhaled 
+ swallowed
+
+SAP is still the dominant provider, but Oracle's PeopleSoft acquisition is intended to grow the company's ....... application division.
+ flagging 
+shrinking 
+waxing 
+wilting
+
+So a series of acquisitions has led to a(n) ....... in which SAP and Oracle share market leadership in the world of business application software.
+cartel 
+consortium 
+monopoly 
+ oligopoly
+
+At the same time, Microsoft has been ....... slow but steady strides in building its own competitive offerings in this space.
+forming 
+ making 
+stretching 
+taking
+
+Microsoft has been on a buying ....... since its purchase of Great Plains several years ago, acquiring Solomon and several other niche companies to stitch together the Microsoft Business Solutions Business Group.
+binge 
+burst 
+spell 
+ spree
+
+The competition between Microsoft and Oracle isn't only about business software; both companies are ....... to be platform companies.
+starving 
+straining 
+stretching 
+ striving

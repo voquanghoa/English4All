@@ -1,0 +1,39 @@
+1. city
+citys 
+ cities 
+
+2. house
+housees
+ houses .
+
+3. boy 
+ boys .
+boyes
+
+4. familymily 
+familys
+ families.
+
+5. life 
+ lives .
+lifes
+
+6. photo 
+ photos .
+photoes
+
+7. phone 
+ phones.
+phonees
+
+8. sandwich
+sandwichs
+ sandwiches.
+
+9. nurse 
+nursees
+ nurses .
+
+10. elf 
+ elves .
+elfes

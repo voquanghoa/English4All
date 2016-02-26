@@ -1,0 +1,35 @@
+7. Our train <u><font color='red'>will arrive</font></u> <u><font color='red'>to</font></u> Hue <u><font color='red'>at</font></u> <u><font color='red'>noon</font></u>.
+will arrive
+ to
+at
+noon
+
+8. <u><font color='red'>Don't</font></u> <u><font color='red'>enter</font></u> <u><font color='red'>to</font></u> this <u><font color='red'>mysterious</font></u> cave.
+Don't
+enter
+ to
+mysterious
+
+9. <u><font color='red'>An</font></u> European gentleman <u><font color='red'>is waiting</font></u> <u><font color='red'>for</font></u> my boss <u><font color='red'>in</font></u> the hall.
+ An
+is waiting
+for
+in
+
+7. <u><font color='red'>My</font></u> brother <u><font color='red'>is</font></u> three years <u><font color='red'>elder</font></u> than <u><font color='red'>me</font></u>.
+My
+is
+ elder
+me
+
+8. The weather <u><font color='red'>was</font></u> <u><font color='red'>such</font></u> cold <u><font color='red'>that</font></u> we <u><font color='red'>didn't go</font></u> out.
+was
+ such
+that
+didn't go
+
+9. I <u><font color='red'>drew</font></u> my salary and I <u><font color='red'>bought</font></u> <u><font color='red'>a trousers</font></u> <u><font color='red'>for</font></u> my father yesterday.
+drew
+bought
+ a trousers
+for

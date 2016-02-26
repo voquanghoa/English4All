@@ -1,0 +1,54 @@
+﻿Would you like  ___  wine?
+ some
+a
+an
+
+Would you like  ___  rice?
+ some
+a
+an
+
+I'd like  ___  cheese for lunch.
+ some
+a
+an
+
+Do you want  ___  cigarette?
+an
+some
+ a
+
+Would you like  ___  apple?
+some
+ an
+a
+
+Can I have  ___  bread?
+an
+a
+ some
+
+Can you give me  ___  money?
+ some
+any
+an
+
+I usually have  ___  cup of coffee at 11 am.
+ a
+some
+an
+
+Could you buy  ___  fruit when you go to the shops?
+an
+ some
+a
+
+He always has  ___  egg for breakfast.
+some
+ an
+a
+
+I'd like  ___  chicken sandwich.
+some
+an
+ a

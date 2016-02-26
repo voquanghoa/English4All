@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">English for all level</string>
+    <string name="loading">Loading...</string>
+    <string name="submit">Submit</string>
+    <string name="finish">Finish</string>
+    <string name="dialog_result_title">This is result</string>
+    <string name="dialog_result_content" formatted="false">Correct: %2d/%2d \nTime test: </string>
+    <string name="dialog_result_button">Show Answers</string>
+    <string name="duration_time_format" formatted="false">%2d:%2d</string>
+    <string name="delay_backkey_message">Please click BACK again to exit</string>
+    <string name="admob_id">ca-app-pub-5633074162966218/1686530286</string>
+    <string name="admob_id_full_screen">ca-app-pub-5633074162966218/8706421088</string>
+    <string name="downloading_file">Downloading file...</string>
+    <string name="can_not_read_file">Can not read file.</string>
+    <string name="download_fail_message">Can not download the file from server. Please check your internet connection.</string>
+</resources>

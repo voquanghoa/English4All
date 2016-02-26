@@ -1,0 +1,59 @@
+31. The dentist gave <u><font color='red'>me</font></u> a <u><font color='red'>check up</font></u> and then <u><font color='red'>telling</font></u> me I needed two <u><font color='red'>fillings</font></u>.
+me	
+check up 	
+ telling	
+fillings
+
+32. These engines <u><font color='red'>used</font></u> <u><font color='red'>being</font></u> started by hand . <u><font color='red'>But now</font></u> they <u><font color='red'>are</font></u> started by electricity.
+used 	
+ being	
+But now 	
+are
+
+33. This house <u><font color='red'>is</font></u> often <u><font color='red'>broken</font></u> <u><font color='red'>off</font></u> and a lot of things are taken <u><font color='red'>away</font></u>.
+is	
+broken 	
+ off	
+away
+
+34. My father <u><font color='red'>has</font></u> <u><font color='red'>a</font></u> mechanic <u><font color='red'>to repair</font></u> his motorbike <u><font color='red'>monthly</font></u>. 
+has	
+a	
+ to repair 	
+monthly
+
+35. There <u><font color='red'>always</font></u> is one <u><font color='red'>wise</font></u> woman <u><font color='red'>who</font></u> is <u><font color='red'>both</font></u> feared and respected by her people.
+ always 	
+wise	
+who 	
+both
+
+36. The woman <u><font color='red'>tells</font></u> them <u><font color='red'>close</font></u> their eyes <u><font color='red'>tightly</font></u> and cover them <u><font color='red'>with</font></u> their hands.
+tells 	
+ close 	
+tightly	
+with
+
+37. They <u><font color='red'>visited</font></u> America about a <u><font color='red'>thousand</font></u> years <u><font color='red'>ago</font></u>, <u><font color='red'>on</font></u> the eleventh century AD.
+visited	
+thousand 	
+ago	
+ on
+
+38. Ha Dong <u><font color='red'>is</font></u> the town <u><font color='red'>where</font></u> I <u><font color='red'>am</font></u> born and <u><font color='red'>grew</font></u> up. 
+is	
+where 	
+ am	
+grew
+
+39. She is <u><font color='red'>the girl</font></u> about <u><font color='red'>that</font></u> I talked <u><font color='red'>to</font></u> you <u><font color='red'>yesterday</font></u>. 
+the girl	
+ that 	
+to	
+yesterday
+
+40. The lesson <u><font color='red'>that</font></u> we are learning <u><font color='red'>now</font></u> is very <u><font color='red'>interested</font></u> <u><font color='red'>but</font></u> difficult.
+that 
+now	
+ interested 	
+but

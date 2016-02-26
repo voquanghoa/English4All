@@ -1,0 +1,59 @@
+According to NAREIT (Yungmann and Taube, 2001), property insurance coverage should be based on fair value, i.e., valuing assets at their current market values — actual, if available, or ......., if not.
+comparative 
+previous 
+projected 
+ theoretical
+
+Much of the fair value debate has had a technical focus on how to place fair values on assets for which no market values ........
+apply 
+compare 
+ exist 
+obtain
+
+While the technical issues are important, the real driver should be improving ....... for users of financial statements.
+opacity 
+redundancy 
+translucency 
+ transparency
+
+A single global standard will increase the ....... of financial presentations, which currently vary considerably.
+completeness 
+comprehension 
+ consistency 
+control
+
+A comprehensive standard ....... comparability across all types of financial institutions.
+correlates 
+ facilitates 
+initiates 
+legislates
+
+When accounting values for assets ....... from their underlying market values, some managements take uneconomic actions to protect accounting performance measures.
+detract 
+distract 
+ diverge 
+divide
+
+For example, during the U.S. savings and loan crisis in the 1980s, many institutions ....... assets with market values above book and continued to hold assets with book values above market.
+ sold off 
+sold out 
+underwrote 
+wrote off
+
+In hindsight, users of their financial statements were not well served by the accounting system ....... at the time.
+at hand 
+ in place 
+on hold 
+underway
+
+Fair value ....... argue that measuring financial assets as close as possible to their true underlying economic values removes these perverse incentives.
+presentations 
+ proponents 
+propositions 
+protocols
+
+Users would also benefit from a clearer picture of the economic ....... of the enterprise.
+breath 
+ health 
+heart 
+scene

@@ -1,0 +1,59 @@
+Electronics is the study and utilization of systems that function by guiding electron flow in ....... such as semiconductors.
+contrivances 
+ devices 
+pieces 
+servers
+
+Designing and building electronic circuits to solve ....... problems is the mandate of electronics engineering.
+parallel 
+ practical 
+partial 
+production
+
+Research into innovative semiconductor technology and applications is considered a ....... of physics.
+ branch 
+responsibility 
+segment 
+subsidiary
+
+Electronic circuits are mainly used to control, process and distribute information, and for the ....... and distribution of electric power.
+commutation 
+contamination 
+conversation 
+ conversion
+
+These two purposes rely on the creation and detection of electromagnetic ....... and electrical currents.
+ fields 
+floors 
+grounds 
+surfaces
+
+The rapid modern advancement of electronics began in ....... with the introduction of the radio.
+ earnest 
+enthusiasm 
+secret 
+sincerity
+
+There are three divisions to an electronics system, an example of which is a television ........
+box 
+case 
+kit 
+ set
+
+First, the input is a broadcast signal either received by its antenna or ....... in through a cable.
+cued 
+ fed 
+led 
+sped
+
+Second, processing circuits inside the TV ....... the brightness, colour and audio data from this signal.
+contract 
+detract 
+ extract 
+retract
+
+Third and last, its output apparatus, a cathode ray tube, changes the electronic signals into a ....... image on its screen.
+vague 
+valuable 
+viable 
+ visible

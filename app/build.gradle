@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "voon.truongvan.english_for_all_level"
+        minSdkVersion 9
+        targetSdkVersion 17
+    }
+
+    buildTypes {
+        release {
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFile = file("$project.buildDir/apk/english_for_all_level.apk")
+                }
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.google.android.gms:play-services:7.8.0'
+    compile files('libs/gson-2.3.1.jar')
+}

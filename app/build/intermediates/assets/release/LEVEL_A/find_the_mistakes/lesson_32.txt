@@ -1,0 +1,35 @@
+6. She is a <u><font color='red'>very</font></u> <u><font color='red'>warm</font></u> woman <u><font color='red'>and</font></u> everyone <u><font color='red'>like</font></u> her.
+very
+warm
+and
+ like
+
+7. There <u><font color='red'>aren't</font></u> <u><font color='red'>much</font></u> beer in the glass. Can she <u><font color='red'>have</font></u> some <u><font color='red'>more</font></u>?
+ aren't
+much
+have
+more
+
+8. <u><font color='red'>Sad</font></u> films always <u><font color='red'>make</font></u> <u><font color='red'>her</font></u> <u><font color='red'>crying</font></u>.
+Sad
+make
+her
+ crying
+
+6. Please <u><font color='red'>stop</font></u> <u><font color='red'>make</font></u> that <u><font color='red'>awful</font></u> <u><font color='red'>noise</font></u>.
+stop
+ make
+awful
+noise
+
+7. I <u><font color='red'>don't know</font></u> <u><font color='red'>where</font></u> the <u><font color='red'>writer's</font></u> name <u><font color='red'>is</font></u>.
+don't know
+ where
+writer's
+is
+
+8. <u><font color='red'>The</font></u> <u><font color='red'>street</font></u> <u><font color='red'>seems</font></u> <u><font color='red'>quietly</font></u>.
+The
+street
+seems
+ quietly

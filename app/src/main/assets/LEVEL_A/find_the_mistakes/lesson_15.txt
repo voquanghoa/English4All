@@ -1,0 +1,35 @@
+7. My daughter <u><font color='red'>not only</font></u> <u><font color='red'>learn</font></u> well but also <u><font color='red'>plays</font></u> the piano <u><font color='red'>beautifully</font></u>.
+not only
+ learn
+plays
+beautifully
+
+8. Jack <u><font color='red'>asked</font></u> his sister <u><font color='red'>mend</font></u> his shirt <u><font color='red'>for</font></u> <u><font color='red'>him</font></u>.
+asked
+ mend
+for
+him
+
+9. <u><font color='red'>Do</font></u> you <u><font color='red'>want</font></u> me <u><font color='red'>make</font></u> you <u><font color='red'>some</font></u> coffee?
+Do
+want
+ make
+some
+
+7. <u><font color='red'>Remember</font></u> <u><font color='red'>finish</font></u> your homework before <u><font color='red'>coming</font></u> <u><font color='red'>to</font></u> class.
+Remember
+ finish
+coming
+to
+
+8. If you <u><font color='red'>had had</font></u> a chance <u><font color='red'>to go</font></u> to the Soviet Union, what <u><font color='red'>would</font></u> you <u><font color='red'>do</font></u>?
+ had had
+to go
+would
+do
+
+9. When we <u><font color='red'>got</font></u> <u><font color='red'>to</font></u> the stadium, the football match <u><font color='red'>already</font></u> <u><font color='red'>started</font></u>.
+got
+to
+already
+ started

@@ -1,0 +1,59 @@
+1. I need ____ egg for this recipe, but we're out.
+a
+ an
+the
+-
+
+2. I need ____ milk for this recipe, but we're out.
+a
+an
+the
+ -
+
+3. I need ____ potato for this recipe, but we're out.
+ a
+an
+the
+-
+
+4. Is that ____ "8" or ____ "B"? I can't read it.
+a / an
+ an / a
+the / the
+- / -
+
+5. Is that ____ "U" or ____ "O"? I can't read it.
+ a / an
+an / a
+the /the
+- / -
+
+6. He is from ____ European country, but I don't know which one.
+ a
+an
+the
+-
+
+7. I enjoyed ____ DVD you gave me for my birthday.
+a
+an
+ the
+-
+
+8. If I were rich, I would buy ____ apartment in Manhattan and ____ house in Hawaii.
+a / an
+ an / a
+the / the
+- / -
+
+9. Do you know ____ name of her perfume?
+a
+an
+ the
+-
+
+10. This school has ____ great teachers.
+a
+an
+the
+ -

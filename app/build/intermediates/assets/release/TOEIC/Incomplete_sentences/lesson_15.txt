@@ -1,0 +1,59 @@
+The train now ....... at the platform 6 is the 10.45 for London.
+sitting 
+ standing 
+waiting 
+remaining
+
+Unfortunately it is now 11 o'clock and so there is a ....... of 15 minutes already.
+waiting 
+lateness 
+space 
+ delay
+
+The train at platform 14 cannot leave because there is a power ....... on that particular line...
+ failure 
+miss 
+failing 
+missing
+
+The train for London at platform 6 is still there and is not ....... to leave for at least 20 minutes.
+intended 
+ expected 
+proposed 
+awaited
+
+The small cafe situated near platform 6 is now ....... free cups of tea to those waiting for the London train.
+discharging 
+dispensing 
+ offering 
+disposing
+
+Severe storms last night together with heavy rainfall means that some of the lines of the station are now ........
+ waterlogged 
+waterproof 
+water soaked 
+waterfall
+
+We thought for a moment that the 10.45 for London might be about to catch fire but it was a ....... alarm.
+wrong 
+ false 
+difficult 
+general
+
+This is a general notice for all passengers: the restaurant in the main ....... is now open.
+concord 
+conduit 
+ concourse 
+condition
+
+There was in fact a small fire in the train on platform 6 but we're glad to tell you that the flames have been ........
+distinguished 
+dampened 
+saturated 
+ extinguished
+
+We regret to announce that the 10.45 for London is now out of service because the driver is having a nervous ........
+ breakdown 
+low down 
+breakout 
+low break

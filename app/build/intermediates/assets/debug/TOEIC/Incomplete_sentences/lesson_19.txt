@@ -1,0 +1,59 @@
+LeaseGuide.com author Al Hearn explains that automobile leasing is based entirely on the ....... that you pay for the amount by which a vehicle's value depreciates during the time you're driving it.
+ concept 
+design 
+image 
+observation
+
+Depreciation is the difference between a vehicle's original value and its value at lease-end (....... value), and is the primary factor that determines the cost of leasing.
+remnant 
+reserve 
+ residual 
+retained
+
+Generally, European and Japanese automobile ....... have lower depreciation than American brands.
+cars 
+logos 
+ makes 
+trademarks
+
+Manufacturer's ....... Retail Price (MSRP) is the full price for a vehicle as displayed on its window sticker, including optional packages and destination charges.
+Sales 
+Standard 
+Stated 
+ Suggested
+
+When you and your dealer sit down and agree on a lease price for a car, this becomes the ....... cost, or "cap cost".
+ capitalized 
+car and package 
+cash projected 
+contract approved
+
+Cap cost can be reduced by rebates, factory-to-dealer incentives, trade-in credit, or a cash ....... payment; these are known as cap cost reductions.
+ down 
+first 
+key 
+prior
+
+When you lease, you're ....... the leasing company's money while you're driving their car and they rightfully expect you to pay interest on that money, the same as with a loan.
+binding over 
+nailing down 
+running through 
+ tying up
+
+This interest is expressed as a money factor, sometimes called lease factor, and is specified as a small ....... number such as.00297.
+ decimal 
+denominator 
+percentile 
+unrounded
+
+A good rule of .......: Lease money factors, converted to an annual interest rate, should be comparable to, if not lower than local new-car loan interest rates.
+calculation 
+law 
+measure 
+ thumb
+
+However, you may not qualify for great money factors unless if you have ....... credit rating.
+a guaranteed 
+a relevant 
+ a spotless 
+an unremarkable

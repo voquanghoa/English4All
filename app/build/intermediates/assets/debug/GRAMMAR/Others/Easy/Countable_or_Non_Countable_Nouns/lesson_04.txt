@@ -1,0 +1,39 @@
+1. voice
+ Countable
+Non_Countable
+ 
+2. plate
+ Countable
+Non_Countable
+
+3. afternoon
+ Countable
+Non_Countable
+
+4. screwdriver
+ Countable
+Non_Countable
+
+5. ear
+ Countable
+Non_Countable
+
+6. table
+ Countable
+Non_Countable
+
+7. oxygen
+Countable
+ Non_Countable
+
+8. ball
+ Countable
+Non_Countable
+
+9. horse
+ Countable
+Non_Countable
+
+10. grass
+Countable
+ Non_Countable

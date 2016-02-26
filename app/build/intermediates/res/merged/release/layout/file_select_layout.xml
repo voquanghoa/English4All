@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/liner_layout_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <voon.truongvan.english_for_all_level.control.AppTitle
+        android:id="@+id/app_title"
+        style="@style/AppTitle" />
+    <ListView
+        android:id="@+id/list_item"
+        android:layout_below="@+id/app_title"
+        android:layout_above="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="multipleChoice"
+        android:descendantFocusability="afterDescendants"
+        >
+    </ListView>
+    <RelativeLayout
+        android:id="@+id/adView"
+        style="@style/AdsPanel"
+     />
+</RelativeLayout><!-- From: file:/F:/Soure_lam_app/Lamviec/Lamviec/Lamviec/List_view_Object/app/src/main/res/layout/file_select_layout.xml -->

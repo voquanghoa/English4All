@@ -1,0 +1,53 @@
+151. It <u><font color='red'>is</font></u> possible <u><font color='red'>to infer</font></u> two <u><font color='red'>completely</font></u> opposite <u><font color='red'>conclusion</font></u> from this set of facts.
+is	
+to infer	
+completely 	
+ conclusion
+
+152. He is not <u><font color='red'>very</font></u> <u><font color='red'>sanguine</font></u> <u><font color='red'>about</font></u> his chances of <u><font color='red'>successful</font></u>. 
+very	
+sanguine 	
+about	
+ successful
+
+153. She <u><font color='red'>admires</font></u> Korean <u><font color='red'>actresses</font></u> in so far as she wears <u><font color='red'>as</font></u> <u><font color='red'>them</font></u>.
+admires	
+actresses 	
+ as	
+them
+
+154. She <u><font color='red'>presented</font></u> reward <u><font color='red'>for</font></u> the return <u><font color='red'>of</font></u> her <u><font color='red'>lost</font></u> bracelet. 
+ presented	
+for 	
+of 	
+lost
+
+156. I think there <u><font color='red'>are</font></u> <u><font color='red'>any</font></u> resources <u><font color='red'>that</font></u> we have left <u><font color='red'>untapped</font></u>.
+are 	
+ any 
+that	
+untapped
+
+157. He <u><font color='red'>enriches</font></u> his <u><font color='red'>knowledge</font></u> by <u><font color='red'>listening</font></u> to the radio <u><font color='red'>every night</font></u>.
+ enriches	
+knowledge 	
+listening	
+every night
+
+158. We <u><font color='red'>have</font></u> searched <u><font color='red'>for</font></u> some of the <u><font color='red'>books</font></u> <u><font color='red'>to which</font></u> you need.
+have 	
+for	
+books	
+ to which
+
+159. It <u><font color='red'>is</font></u> many <u><font color='red'>years</font></u> <u><font color='red'>for</font></u> Mount Vesuvius <u><font color='red'>last</font></u> erupted . 
+is	
+years 	
+ for	
+last
+
+160. <u><font color='red'>Reforming</font></u> the education <u><font color='red'>system</font></u> <u><font color='red'>will</font></u> be a <u><font color='red'>difficulty</font></u> process.
+Reforming 	
+system	
+will
+ difficulty

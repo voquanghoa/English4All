@@ -1,0 +1,46 @@
+﻿Find the comparative ; don't write 'than'.
+
+1. bad 
+worse
+
+2. beautiful 
+more beautiful 
+
+3. expensive 
+more expensive
+
+4. hot 
+hotter
+
+5. clean 
+cleaner
+
+6. big 
+bigger 
+
+7. dangerous 
+more dangerous
+
+8. nice 
+nicer
+
+9. pretty 
+prettier
+
+10. good 
+better
+
+11. interesting 
+more interesting
+
+12. fat 
+fatter
+
+13. happy 
+happier
+
+14. cold 
+colder
+
+15. talkative 
+more talkative

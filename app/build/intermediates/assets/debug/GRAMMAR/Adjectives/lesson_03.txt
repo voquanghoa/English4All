@@ -1,0 +1,39 @@
+﻿1. Alice has got blue eyes ---> She's a  ___  girl. 
+ blue-eyed
+blue-eyeded
+
+2. Willy Wonka has got dark hair ---> He is  ___ . 
+ dark-haired
+dark-hair
+
+3. Angelina is wearing a dress with white stripes ---> She is wearing a  ___  dress. 
+	white-striped
+white-stripe
+
+4. Alisson has got a bad temper ---> She's a  ___  woman. 
+ bad-tempered
+bad-temper
+
+5. Sonia writes with her right hand ---> She is  ___ . 
+ right-handed
+right-hand
+
+6. Leonardo is wearing a t-shirt with long sleeves ---> He's wearing a  ___  t-shirt. 
+	long-sleeved
+long-sleeve
+
+7. This boy is 7 years old ---> He is a 7- ___  boy. 
+ year-old
+year-olded
+
+8. This visit lasts 2 hours ---> It's a 2- ___ . 
+ hour-visit
+hour-visited
+
+9. This tower is 250 feet high ----> It's a 250- ___  tower. 
+ foot-high
+foot-highed
+
+10. Charlie has got ginger hair ---> He is  ___ .
+ ginger-haired
+gingered-haired

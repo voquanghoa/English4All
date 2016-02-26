@@ -1,0 +1,39 @@
+1. meat
+Countable
+ Non_Countable
+ 
+2. song
+ Countable
+Non_Countable
+
+3. zoo
+ Countable
+Non_Countable
+
+4. coin
+Countable
+Non_Countable
+
+5. milk
+Countable
+ Non_Countable
+
+6. letter
+ Countable
+Non_Countable
+
+7. hammer
+ Countable
+Non_Countable
+
+8. flour
+Countable
+ Non_Countable
+
+9. door
+ Countable
+Non_Countable
+
+10. chalk
+Countable
+ Non_Countable

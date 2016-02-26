@@ -1,0 +1,35 @@
+7. The 20% <u><font color='red'>discount</font></u> is only <u><font color='red'>applicable</font></u> <u><font color='red'>for</font></u> items <u><font color='red'>costing</font></u> over $300.
+discount
+applicable
+ for
+costing
+
+8. It <u><font color='red'>was</font></u> <u><font color='red'>amazed</font></u> that Smith <u><font color='red'>showed</font></u> so <u><font color='red'>few</font></u> grief at his mother's death.
+was
+amazed
+showed
+ few
+
+9. It's <u><font color='red'>impossible</font></u> <u><font color='red'>believing</font></u> that anyone would purposely harm a child, <u><font color='red'>least of all</font></u> <u><font color='red'>its</font></u> own mother.
+impossible
+ believing
+least of all
+its
+
+7. I <u><font color='red'>find</font></u> the time of English meals very <u><font color='red'>strange</font></u>. I'm not <u><font color='red'>accustomed having</font></u> dinner <u><font color='red'>at</font></u> 5 p.m.
+find
+strange
+ accustomed having
+at
+
+8. Suzanne <u><font color='red'>really</font></u> <u><font color='red'>takes after</font></u> her father. She <u><font color='red'>had</font></u> got the <u><font color='red'>same</font></u> character.
+really
+takes after
+ had
+same
+
+9. The market in town <u><font color='red'>was</font></u> so <u><font color='red'>crowded</font></u> that she gave <u><font color='red'>in</font></u> <u><font color='red'>doing</font></u> her shopping here.
+was
+crowded
+ in
+doing

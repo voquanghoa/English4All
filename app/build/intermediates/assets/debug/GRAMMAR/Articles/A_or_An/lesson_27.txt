@@ -1,0 +1,39 @@
+﻿1.___clowns 
+an
+a
+ _
+
+2.___dentist 
+an
+ a
+_
+
+3.___artist 
+ an
+a
+_
+
+4.___postman 
+an
+ a
+_
+
+5.___pilot 
+an
+ a
+_
+
+6.___policemen 
+an
+a
+ _
+
+7.___actress 
+ an
+a
+_
+
+8.___dancers 
+an
+a
+ _

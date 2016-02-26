@@ -1,0 +1,59 @@
+6. When my uncle <u><font color='red'>was</font></u> <u><font color='red'>in</font></u> London, he <u><font color='red'>has stayed</font></u> in this hotel for <u><font color='red'>about</font></u> two weeks.
+was
+in
+ has stayed
+about
+
+7. The <u><font color='red'>old</font></u> man <u><font color='red'>is reading</font></u> a newspaper <u><font color='red'>over there</font></u> is Jim's <u><font color='red'>father</font></u>.
+old
+ is reading
+over there		
+father
+
+8. I think she would <u><font color='red'>succeed</font></u> <u><font color='red'>if</font></u> <u><font color='red'>she</font></u> had tried <u><font color='red'>harder</font></u>.
+ succeed
+if
+she
+harder
+
+9. My parents wish they <u><font color='red'>have</font></u> <u><font color='red'>enough</font></u> money <u><font color='red'>to</font></u> <u><font color='red'>buy</font></u> that building.
+ have
+enough
+to
+buy
+
+10. My brother <u><font color='red'>doesn't</font></u> care how much <u><font color='red'>does the car cost</font></u> <u><font color='red'>because</font></u> he <u><font color='red'>is going to buy</font></u> it anyway.
+doesn't
+ does the car cost
+because
+is going to buy
+
+6. Our house <u><font color='red'>is supposed</font></u> <u><font color='red'>to paint</font></u> <u><font color='red'>white</font></u> <u><font color='red'>by</font></u> my father.
+is supposed
+ to paint
+white
+by
+
+7. Tommy felt <u><font color='red'>happily</font></u> when he <u><font color='red'>heard</font></u> the <u><font color='red'>interesting</font></u> <u><font color='red'>news</font></u>.
+ happily
+heard
+interesting
+news
+
+8. We <u><font color='red'>consider</font></u> Marx <u><font color='red'>is</font></u> <u><font color='red'>the</font></u> founder <u><font color='red'>of</font></u> scientific communism.
+consider
+ is
+the
+of
+
+9. This apprentice has spent <u><font color='red'>in</font></u> two weeks <u><font color='red'>working</font></u> <u><font color='red'>on</font></u> that <u><font color='red'>new</font></u> machine.
+ in
+working
+on
+new
+
+10. Ask <u><font color='red'>the</font></u> young <u><font color='red'>guest</font></u> over there <u><font color='red'>when</font></u> exactly <u><font color='red'>was she</font></u> born.
+the
+guest
+when
+ was she

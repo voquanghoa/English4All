@@ -1,0 +1,59 @@
+Accounting information systems are a ....... part of an organization's day-to-day operations.
+vigorous 
+virtual 
+visceral 
+ vital
+
+Prices can vary from customized multimillion dollar systems to ....... software that costs less than $100.
+prefabricated 
+preinstalled 
+ prepackaged 
+prepared
+
+Customization allows for a good fit to the business's needs, smooth ....... with other internal systems, and the ability to implement special security measures.
+insertion 
+intercalation 
+ interfacing 
+interference
+
+Advantages of non-custom software include low cost, immediate availability, quality, documentation on data flow, good compatibility with external systems, and ....... from the vendor.
+advice 
+advise 
+ support 
+supply
+
+Disadvantages include lack of features, paying for ....... features, and risk of vendor availability.
+undesirable 
+unexpected 
+unordered 
+ unwanted
+
+Good accounting systems allow users to run informal reports such as ....... accounts receivable or to keep track of inventory.
+ aged 
+listed 
+timed 
+unpaid
+
+Accounting systems have to track ....... in three business processes: order entry/sales, billing/accounts receivable/cash receipts, and purchasing/accounts payable/cash.
+sequences 
+steps 
+ transactions 
+transfers
+
+The order entry/sales process ....... sales data and records the information.
+ captures 
+contains 
+controls 
+copies
+
+This process starts with a customer order, which initiates a credit ........
+card 
+ check 
+rating 
+report
+
+After the customer is approved, the sales order department must let the warehouse know what goods to pick, and the shipping department needs to know that an order has been ........
+filed 
+initiated 
+ placed 
+sent
