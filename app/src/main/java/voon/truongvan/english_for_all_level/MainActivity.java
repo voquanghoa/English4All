@@ -7,11 +7,15 @@ import android.view.View;
 
 import com.google.android.gms.ads.AdListener;
 
+import java.io.IOException;
+
 import voon.truongvan.english_for_all_level.constant.AppConstant;
 import voon.truongvan.english_for_all_level.control.BaseActivity;
 import voon.truongvan.english_for_all_level.controller.AssetDataController;
 import voon.truongvan.english_for_all_level.controller.HttpDownloadController;
 import voon.truongvan.english_for_all_level.controller.OnlineDataController;
+import voon.truongvan.english_for_all_level.controller.QuestionHelper;
+import voon.truongvan.english_for_all_level.model.Question;
 import voon.truongvan.english_for_all_level.util.Utils;
 
 public class MainActivity extends BaseActivity implements HttpDownloadController.IDownload, AppConstant {
@@ -31,12 +35,13 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
     }
 
     public void onBackPressed() {
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
-        } else {
-            Utils.Log("DID NOT LOAD FULL SCREEN ADS");
-            super.onBackPressed();
-        }
+        startActivity(new Intent(this, ContestActivity.class));
+//        if (mInterstitialAd.isLoaded()) {
+//            mInterstitialAd.show();
+//        } else {
+//            Utils.Log("DID NOT LOAD FULL SCREEN ADS");
+//            super.onBackPressed();
+//        }
     }
 
     public void onGrammarClicked(View view){
@@ -59,10 +64,6 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
         }else{
             startActivity(new Intent(this, ExaminationActivity.class));
         }
-    }
-
-    public void onMoreAppClick(View view){
-        showMessage("Not implemented yet !");
     }
 
     public void onDownloadDone(String downloadUrl, byte[] data) {
@@ -90,8 +91,6 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
     public void onDownloadProgress(int done, int total) {
         setProgressMessage("Download " + (done/1024)+" Kb/" + (total/1024)+" Kb.");
     }
-
-
 
     public void onDestroy() {
         super.onDestroy();

@@ -64,7 +64,9 @@ public class AssetDataController implements IDataController, AppConstant {
             }
             return stringBuffer.toString();
         } finally {
-            reader.close();
+            if(reader!=null) {
+                reader.close();
+            }
         }
     }
 
@@ -79,7 +81,9 @@ public class AssetDataController implements IDataController, AppConstant {
             }
             return lines;
         } finally {
-            reader.close();
+            if(reader!=null) {
+                reader.close();
+            }
         }
     }
 }

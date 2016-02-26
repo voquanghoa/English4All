@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 import voon.truongvan.english_for_all_level.R;
 import voon.truongvan.english_for_all_level.controller.QuestionHelper;
 import voon.truongvan.english_for_all_level.model.Question;
@@ -26,6 +28,7 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
     private TestContent test;
     private boolean showAnswer = false;
     private int[] userSelection;
+    private boolean showQuestionIndex;
     private int[] radioButtonId = new int[]{
             R.id.answer_a,
             R.id.answer_b,
@@ -36,14 +39,23 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
     public QuestionAnswerAdapter(Context context, TestContent test) {
         this.context = context;
         this.test = test;
+        this.showQuestionIndex = true;
         initUserSelect();
     }
 
     private void initUserSelect(){
         this.userSelection = new int[test.getQuestions().size()];
-        for(int i=0;i<this.userSelection.length;i++){
-            this.userSelection[i] = -1;
+        Arrays.fill(userSelection, -1);
+    }
+
+    public void resetUserSelection(){
+        Arrays.fill(userSelection,-1);
+    }
+    public void notifyDataSetChanged() {
+        if(this.userSelection.length<this.getCount()){
+            initUserSelect();
         }
+        super.notifyDataSetChanged();
     }
 
     public int getTotal(){
@@ -160,8 +172,12 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
         }
     }
 
+    public void setShowQuestionIndex(boolean isShow){
+        showQuestionIndex = isShow;
+    }
+
     private void setQuestionText(Question question, TextView tvQuestion, int position) {
-        tvQuestion.setText(Html.fromHtml((1 + position) + ". " + question.getQuestion()
+        tvQuestion.setText(Html.fromHtml(showQuestionIndex?((1 + position) + ". "):"" + question.getQuestion()
                 .replace("<u>", "").replace("</u>", "")
                 .trim()));
     }

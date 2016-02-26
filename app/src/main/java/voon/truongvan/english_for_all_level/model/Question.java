@@ -70,6 +70,10 @@ public class Question {
         return category;
     }
 
+    public boolean hasCategory(){
+        return category!=null && category.length()>0;
+    }
+
     public void setCategory(String category) {
         this.category = category;
     }

@@ -1,9 +1,15 @@
 package voon.truongvan.english_for_all_level.controller;
 
+import android.content.Context;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import voon.truongvan.english_for_all_level.constant.AppConstant;
 import voon.truongvan.english_for_all_level.model.Question;
 import voon.truongvan.english_for_all_level.model.TestContent;
 import voon.truongvan.english_for_all_level.util.Utils;
@@ -129,7 +135,7 @@ public class QuestionHelper {
                 }
             }
 
-            return answer.replaceAll("\r","");
+            return answer.replaceAll("\r", "");
         }
         return "";
     }
@@ -169,5 +175,44 @@ public class QuestionHelper {
             }
         }
         return lineGroup;
+    }
+
+    public static Question getQuestion(Context context, int questionId) throws IOException {
+        BufferedReader reader = null;
+
+        try {
+            reader = new BufferedReader(new InputStreamReader(context.getAssets().open(AppConstant.INDEX_DATA_FILE)));
+            String mLine;
+            while ((mLine = reader.readLine()) != null) {
+                if(mLine.trim().length()>0 && mLine.indexOf("\t")>0){
+                    String[] strs = mLine.split("\t");
+                    if(strs.length>0){
+                        int index = Integer.parseInt(strs[0]);
+                        if(index>questionId){
+                            TestContent testContent = AssetDataController.getInstance().loadTestFile(context,strs[1]);
+                            List<Question> questions = testContent.getQuestions();
+                            int innerQuestionId = questions.size()+questionId-index;
+                            Question question = questions.get(innerQuestionId);
+                            if(!question.hasCategory()){
+                                for(int i=innerQuestionId-1;i>=0;i--){
+                                    Question currentQuestion = questions.get(i);
+                                    if(currentQuestion.hasCategory()){
+                                        question.setCategory(currentQuestion.getCategory());
+                                        break;
+                                    }
+                                }
+                            }
+                            return question;
+                        }
+                    }
+                }
+            }
+
+        } finally {
+            if(reader!=null) {
+                reader.close();
+            }
+        }
+        return null;
     }
 }

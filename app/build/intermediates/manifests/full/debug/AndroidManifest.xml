@@ -52,6 +52,9 @@
             android:name="voon.truongvan.english_for_all_level.ExaminationActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
+            android:name="voon.truongvan.english_for_all_level.ContestActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />

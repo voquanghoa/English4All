@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <voon.truongvan.english_for_all_level.control.AppTitle
+        android:id="@+id/app_title"
+        style="@style/AppTitle" />
+    <ListView
+        android:id="@+id/question_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit_button"
+        android:layout_below="@id/app_title"
+        >
+    </ListView>
+
+    <Button
+        android:id="@+id/submit_button"
+        style="@style/CategoryButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_button_height"
+        android:onClick="onSubmit"
+        android:text="@string/submit"
+        android:layout_above="@+id/adView"
+        />
+    <RelativeLayout
+        android:id="@+id/adView"
+        style="@style/AdsPanel"
+        />
+</RelativeLayout><!-- From: file:/D:/Project/List_view_Object/app/src/main/res/layout/contest_content_layout.xml -->

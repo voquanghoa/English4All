@@ -5,6 +5,7 @@ package voon.truongvan.english_for_all_level.constant;
  */
 public interface AppConstant {
     String JSON_DATA_FILE = "data.json";
+    String INDEX_DATA_FILE = "index.txt";
     String SERVER_BASE_PATH = "http://doanit.com/english4all/";
 
     String GRAMMAR_FOLDER = "grammar/";
