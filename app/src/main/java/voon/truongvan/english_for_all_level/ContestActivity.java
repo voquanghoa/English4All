@@ -94,7 +94,6 @@ public class ContestActivity extends BaseActivity {
         }else if(questionAnswerAdapter.getCorrects()==1){
             showNextQuestion();
         }else{
-            numOfQuestion = 12;
             questionAnswerAdapter.setShowAnswer(true);
 
             GoogleApiClient apiClient = getApiClient();
