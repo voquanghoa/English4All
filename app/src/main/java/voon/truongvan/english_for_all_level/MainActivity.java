@@ -1,11 +1,15 @@
 package voon.truongvan.english_for_all_level;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.gms.ads.AdListener;
+
 import voon.truongvan.english_for_all_level.constant.AppConstant;
 import voon.truongvan.english_for_all_level.control.BaseActivity;
 import voon.truongvan.english_for_all_level.controller.AssetDataController;
@@ -28,55 +32,77 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
         });
     }
 
-    public void startActivity(Intent intent){
-        try{
+    public void startActivity(Intent intent) {
+        try {
             super.startActivity(intent);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             Utils.Log(ex);
         }
     }
 
-    public void onBackPressed() {
+    public void onPuzzleClick(View view) {
         startActivity(new Intent(this, ContestActivity.class));
-//        if (mInterstitialAd.isLoaded()) {
-//            mInterstitialAd.show();
-//        } else {
-//            Utils.Log("DID NOT LOAD FULL SCREEN ADS");
-//            super.onBackPressed();
-//        }
     }
 
-    public void onGrammarClicked(View view){
-        showLeaderboard(getString(R.string.leaderboard_hight_score));
-        /*
-        if(OnlineDataController.getInstance().getGrammarDataItem() == null) {
+    public void onBackPressed() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Utils.Log("DID NOT LOAD FULL SCREEN ADS");
+            super.onBackPressed();
+        }
+    }
+
+    private Dialog rankingDialog = null;
+
+    public void showRanking(View view) {
+        if (rankingDialog == null) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            rankingDialog = builder.setTitle("Ranking")
+                    .setIcon(R.drawable.leaderboardall)
+                    .setMessage("Which one you want to show ?")
+                    .setPositiveButton("Leader board", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            showLeaderboard(getString(R.string.leaderboard_hight_score));
+                        }
+                    }).setNegativeButton("Achievement", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            showAchievement();
+                        }
+                    }).create();
+        }
+
+        rankingDialog.show();
+    }
+
+    public void onGrammarClicked(View view) {
+        if (OnlineDataController.getInstance().getGrammarDataItem() == null) {
             showLoadingDialog();
             HttpDownloadController.getInstance().startDownload(GRAMMAR_JSON_PATH, this);
-        }else{
+        } else {
             startActivity(new Intent(this, GrammarActivity.class));
-        }*/
+        }
     }
 
-    public void onStudyOfflineClick(View view){
-        showAchievement();
-        //startActivity(new Intent(this, StudyOfflineActivity.class));
+    public void onStudyOfflineClick(View view) {
+        startActivity(new Intent(this, StudyOfflineActivity.class));
     }
 
-    public void onExaminationClick(View view){
-        if(OnlineDataController.getInstance().getExaminationDataItem() == null) {
+    public void onExaminationClick(View view) {
+        if (OnlineDataController.getInstance().getExaminationDataItem() == null) {
             showLoadingDialog();
             HttpDownloadController.getInstance().startDownload(EXAMINATION_JSON_PATH, this);
-        }else{
+        } else {
             startActivity(new Intent(this, ExaminationActivity.class));
         }
     }
 
     public void onDownloadDone(String downloadUrl, byte[] data) {
         closeLoadingDialog();
-        if(downloadUrl.equals(EXAMINATION_JSON_PATH)){
+        if (downloadUrl.equals(EXAMINATION_JSON_PATH)) {
             OnlineDataController.getInstance().loadExamination(data);
             startActivity(new Intent(this, ExaminationActivity.class));
-        }else{
+        } else {
             OnlineDataController.getInstance().loadGrammar(data);
             startActivity(new Intent(this, GrammarActivity.class));
         }
@@ -94,7 +120,7 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
     }
 
     public void onDownloadProgress(int done, int total) {
-        setProgressMessage("Download " + (done/1024)+" Kb/" + (total/1024)+" Kb.");
+        setProgressMessage("Download " + (done / 1024) + " Kb/" + (total / 1024) + " Kb.");
     }
 
     public void onDestroy() {

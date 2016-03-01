@@ -5,26 +5,21 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_menu_bg"
     >
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:padding="@dimen/main_menu_padding"
+        android:src="@drawable/main_menu_header" />
     <LinearLayout
+        android:layout_below="@+id/app_logo"
         android:layout_above="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="@dimen/main_menu_padding"
-        android:weightSum="1000">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="40" />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="225"
-            android:src="@drawable/main_menu_header" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="34" />
+        android:weightSum="6">
         <LinearLayout style="@style/MainMenuItemRow">
             <ImageView
                 style="@style/MainMenuItemIcon"
@@ -35,8 +30,7 @@
                 android:onClick="onGrammarClicked"
                 android:src="@drawable/main_menu_grammar_button" />
         </LinearLayout>
-        <LinearLayout
-            style="@style/MainMenuItemRow"
+        <LinearLayout style="@style/MainMenuItemRow"
             android:gravity="right">
             <voon.truongvan.english_for_all_level.control.EffectfulImageView
                 style="@style/MainMenuItemButton"
@@ -67,6 +61,26 @@
             <ImageView
                 style="@style/MainMenuItemIcon"
                 android:src="@drawable/main_menu_listen_icon" />
+        </LinearLayout>
+        <LinearLayout style="@style/MainMenuItemRow"            >
+            <ImageView
+                style="@style/MainMenuItemIcon"
+                android:src="@drawable/main_menu_ranking_icon" />
+            <voon.truongvan.english_for_all_level.control.EffectfulImageView
+                style="@style/MainMenuItemButton"
+                android:onClick="showRanking"
+                android:src="@drawable/main_menu_ranking_button" />
+        </LinearLayout>
+        <LinearLayout style="@style/MainMenuItemRow"
+            android:gravity="right"
+            >
+            <voon.truongvan.english_for_all_level.control.EffectfulImageView
+                style="@style/MainMenuItemButton"
+                android:onClick="onPuzzleClick"
+                android:src="@drawable/main_menu_puzzle_button" />
+            <ImageView
+                style="@style/MainMenuItemIcon"
+                android:src="@drawable/main_menu_puzzle_icon" />
         </LinearLayout>
     </LinearLayout>
     <RelativeLayout

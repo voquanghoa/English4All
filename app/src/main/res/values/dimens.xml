@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="main_menu_new_button_margin">10dp</dimen>
+    <dimen name="main_menu_new_button_margin">2dp</dimen>
     <dimen name="main_menu_padding">10dp</dimen>
     <dimen name="list_item_height">60dp</dimen>
     <dimen name="list_item_button_margin">10dp</dimen>
