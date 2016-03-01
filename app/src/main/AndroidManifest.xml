@@ -16,8 +16,12 @@
         android:theme="@style/AppTheme"
         android:name=".application.EnglishForAllLevelApplication"
         >
-        <meta-data android:name="com.google.android.gms.version"
-               android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

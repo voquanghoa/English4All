@@ -1,9 +1,6 @@
 package voon.truongvan.english_for_all_level.util;
 
 import android.util.Log;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Random;
 
 /**

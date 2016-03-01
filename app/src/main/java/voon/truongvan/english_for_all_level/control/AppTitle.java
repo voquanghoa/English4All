@@ -10,10 +10,13 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.games.Games;
 import com.google.android.gms.plus.PlusShare;
 
 import voon.truongvan.english_for_all_level.R;
 import voon.truongvan.english_for_all_level.constant.AppConstant;
+import voon.truongvan.english_for_all_level.leaderboard.BaseGameActivity;
 
 /**
  * Created by Vo Quang Hoa on 12/21/2015.

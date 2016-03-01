@@ -4,7 +4,11 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
+
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.games.Games;
 
 import java.io.IOException;
 
@@ -25,6 +29,24 @@ public class ContestActivity extends BaseActivity {
     private int arrayOfIndex[];
     private int currentQuestionIndex;
     private int numOfQuestion;
+    private int[] achievementScore = new int[]{
+            5,
+            10,
+            15,
+            20,
+            30,
+            50
+    };
+
+    private int[] achievementId = new int[]{
+            R.string.achievement_win_5_questions_in_a_row,
+            R.string.achievement_win_10_questions_in_a_row,
+            R.string.achievement_win_15_questions_in_a_row,
+            R.string.achievement_win_20_questions_in_a_row,
+            R.string.achievement_win_30_questions_in_a_row,
+            R.string.achievement_win_50_questions_in_a_row,
+    };
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +93,18 @@ public class ContestActivity extends BaseActivity {
             this.finish();
         }else if(questionAnswerAdapter.getCorrects()==1){
             showNextQuestion();
-        }else questionAnswerAdapter.setShowAnswer(true);
+        }else{
+            numOfQuestion = 12;
+            questionAnswerAdapter.setShowAnswer(true);
+
+            GoogleApiClient apiClient = getApiClient();
+            Games.Leaderboards.submitScore(apiClient,
+                    getString(R.string.leaderboard_hight_score), numOfQuestion-1);
+            for(int i=0;i<achievementScore.length;i++){
+                if(numOfQuestion>achievementScore[i]){
+                    Games.Achievements.unlock(apiClient, getString(achievementId[i]));
+                }
+            }
+        }
     }
 }

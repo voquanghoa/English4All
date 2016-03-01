@@ -6,16 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.gms.ads.AdListener;
-
-import java.io.IOException;
-
 import voon.truongvan.english_for_all_level.constant.AppConstant;
 import voon.truongvan.english_for_all_level.control.BaseActivity;
 import voon.truongvan.english_for_all_level.controller.AssetDataController;
 import voon.truongvan.english_for_all_level.controller.HttpDownloadController;
 import voon.truongvan.english_for_all_level.controller.OnlineDataController;
-import voon.truongvan.english_for_all_level.controller.QuestionHelper;
-import voon.truongvan.english_for_all_level.model.Question;
 import voon.truongvan.english_for_all_level.util.Utils;
 
 public class MainActivity extends BaseActivity implements HttpDownloadController.IDownload, AppConstant {
@@ -26,12 +21,19 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
         AssetDataController.getInstance().loadDataItem(this);
 
         loadFullAds();
-
         mInterstitialAd.setAdListener(new AdListener() {
             public void onAdClosed() {
                 finish();
             }
         });
+    }
+
+    public void startActivity(Intent intent){
+        try{
+            super.startActivity(intent);
+        }catch (Exception ex){
+            Utils.Log(ex);
+        }
     }
 
     public void onBackPressed() {
@@ -45,16 +47,19 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
     }
 
     public void onGrammarClicked(View view){
+        showLeaderboard(getString(R.string.leaderboard_hight_score));
+        /*
         if(OnlineDataController.getInstance().getGrammarDataItem() == null) {
             showLoadingDialog();
             HttpDownloadController.getInstance().startDownload(GRAMMAR_JSON_PATH, this);
         }else{
             startActivity(new Intent(this, GrammarActivity.class));
-        }
+        }*/
     }
 
     public void onStudyOfflineClick(View view){
-        startActivity(new Intent(this, StudyOfflineActivity.class));
+        showAchievement();
+        //startActivity(new Intent(this, StudyOfflineActivity.class));
     }
 
     public void onExaminationClick(View view){

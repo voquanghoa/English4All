@@ -16,11 +16,12 @@ import com.google.android.gms.ads.InterstitialAd;
 
 import voon.truongvan.english_for_all_level.R;
 import voon.truongvan.english_for_all_level.constant.AppConstant;
+import voon.truongvan.english_for_all_level.leaderboard.BaseGameActivity;
 
 /**
  * Created by voqua on 12/20/2015.
  */
-public class BaseActivity extends Activity implements DialogInterface.OnCancelListener, AppConstant {
+public class BaseActivity extends BaseGameActivity implements DialogInterface.OnCancelListener, AppConstant {
     protected AppTitle appTitle;
     private ProgressDialog progressDialog;
     private AdView adView;
@@ -29,7 +30,7 @@ public class BaseActivity extends Activity implements DialogInterface.OnCancelLi
     protected InterstitialAd mInterstitialAd;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         if(adRequest == null){
@@ -147,5 +148,15 @@ public class BaseActivity extends Activity implements DialogInterface.OnCancelLi
             adView.destroy();
         }
         super.onDestroy();
+    }
+
+    @Override
+    public void onSignInFailed() {
+
+    }
+
+    @Override
+    public void onSignInSucceeded() {
+
     }
 }

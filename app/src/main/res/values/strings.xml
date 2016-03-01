@@ -13,4 +13,28 @@
     <string name="downloading_file">Downloading file...</string>
     <string name="can_not_read_file">Can not read file.</string>
     <string name="download_fail_message">Can not download the file from server. Please check your internet connection.</string>
+
+
+
+    <string name="sign_in_failed">Failed to sign in. Please check your network connection and try again.</string>
+    <string name="app_misconfigured">The application is incorrectly configured. Check that the package name and signing certificate match the client ID created in Developer Console. Also, if the application is not yet published, check that the account you are trying to sign in with is listed as a tester account. See logs for more information.</string>
+    <string name="license_failed">License check failed.</string>
+    <string name="unknown_error">Unknown error.</string>
+
+    <string name="gamehelper_sign_in_failed">Failed to sign in. Please check your network connection and try again.</string>
+    <string name="gamehelper_app_misconfigured">The application is incorrectly configured. Check that the package name and signing certificate match the client ID created in Developer Console. Also, if the application is not yet published, check that the account you are trying to sign in with is listed as a tester account. See logs for more information.</string>
+    <string name="gamehelper_license_failed">License check failed.</string>
+    <string name="gamehelper_unknown_error">Unknown error.</string>
+
+    <string name="app_id">458048073185</string>
+    <string name="client_id">200225838762-e5vqjgsda1ls0ift34tmi5tmu68n5afl.apps.googleusercontent.com</string>
+    <string name="package_name">voon.truongvan.english_for_all_level</string>
+    <string name="leaderboard_hight_score">CgkI4durrqoNEAIQAQ</string>
+
+    <string name="achievement_win_5_questions_in_a_row">CgkI4durrqoNEAIQAg</string>
+    <string name="achievement_win_10_questions_in_a_row">CgkI4durrqoNEAIQAw</string>
+    <string name="achievement_win_15_questions_in_a_row">CgkI4durrqoNEAIQBA</string>
+    <string name="achievement_win_20_questions_in_a_row">CgkI4durrqoNEAIQBQ</string>
+    <string name="achievement_win_30_questions_in_a_row">CgkI4durrqoNEAIQBg</string>
+    <string name="achievement_win_50_questions_in_a_row">CgkI4durrqoNEAIQBw</string>
 </resources>

@@ -25,6 +25,15 @@
         android:src="@drawable/google"
         />
     <voon.truongvan.english_for_all_level.control.EffectfulImageView
+        android:id="@+id/action_leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/app_title_icon_space"
+        android:layout_toLeftOf="@+id/action_google"
+        android:adjustViewBounds="true"
+        android:src="@drawable/leaderboardall"
+        />
+    <voon.truongvan.english_for_all_level.control.EffectfulImageView
         android:id="@+id/app_icon"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
