@@ -2,7 +2,9 @@ package voon.truongvan.english_for_all_level.control;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -28,6 +30,8 @@ public class BaseActivity extends BaseGameActivity implements DialogInterface.On
     private static AdRequest adRequest;
 
     protected InterstitialAd mInterstitialAd;
+    private SharedPreferences sharedPreferences;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -159,4 +163,19 @@ public class BaseActivity extends BaseGameActivity implements DialogInterface.On
     public void onSignInSucceeded() {
 
     }
+
+    protected void enableSharedPreferences(){
+        sharedPreferences = getSharedPreferences("English4All", Context.MODE_PRIVATE);
+    }
+
+    protected boolean getSharedPreferencesBoolean(String preferencesKey, boolean defaultValue){
+        return sharedPreferences.getBoolean(preferencesKey, defaultValue);
+    }
+
+    protected void setSharedPreferencesBoolean(String preferencesKey, boolean value){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(preferencesKey, value);
+        editor.commit();
+    }
+
 }

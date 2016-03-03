@@ -68,16 +68,18 @@
                 android:src="@drawable/main_menu_ranking_icon" />
             <voon.truongvan.english_for_all_level.control.EffectfulImageView
                 style="@style/MainMenuItemButton"
+                android:id="@+id/button_ranking"
                 android:onClick="showRanking"
-                android:src="@drawable/main_menu_ranking_button" />
+                android:src="@drawable/main_menu_ranking_button_bg" />
         </LinearLayout>
         <LinearLayout style="@style/MainMenuItemRow"
             android:gravity="right"
             >
             <voon.truongvan.english_for_all_level.control.EffectfulImageView
+                android:id="@+id/button_puzzle"
                 style="@style/MainMenuItemButton"
                 android:onClick="onPuzzleClick"
-                android:src="@drawable/main_menu_puzzle_button" />
+                android:src="@drawable/main_menu_puzzle_button_bg" />
             <ImageView
                 style="@style/MainMenuItemIcon"
                 android:src="@drawable/main_menu_puzzle_icon" />

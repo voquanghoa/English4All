@@ -2,8 +2,10 @@ package voon.truongvan.english_for_all_level;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -19,17 +21,25 @@ import voon.truongvan.english_for_all_level.util.Utils;
 
 public class MainActivity extends BaseActivity implements HttpDownloadController.IDownload, AppConstant {
 
+    private SharedPreferences sharedPreferences;
+    private final String SHOW_PUZZLE_NEW = "ShowPuzzleNew";
+    private final String SHOW_RANKING_NEW = "ShowRankingNew";
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu_layout);
         AssetDataController.getInstance().loadDataItem(this);
 
         loadFullAds();
+
+        enableSharedPreferences();
         mInterstitialAd.setAdListener(new AdListener() {
             public void onAdClosed() {
                 finish();
             }
         });
+        findViewById(R.id.button_puzzle).setActivated(getSharedPreferencesBoolean(SHOW_PUZZLE_NEW, true));
+        findViewById(R.id.button_ranking).setActivated(getSharedPreferencesBoolean(SHOW_RANKING_NEW, true));
     }
 
     public void startActivity(Intent intent) {
@@ -41,6 +51,8 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
     }
 
     public void onPuzzleClick(View view) {
+        findViewById(R.id.button_puzzle).setActivated(false);
+        setSharedPreferencesBoolean(SHOW_PUZZLE_NEW, false);
         startActivity(new Intent(this, ContestActivity.class));
     }
 
@@ -68,6 +80,11 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
                     }).setNegativeButton("Achievement", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             showAchievement();
+                        }
+                    }).setOnDismissListener(new DialogInterface.OnDismissListener() {
+                        public void onDismiss(DialogInterface dialog) {
+                            findViewById(R.id.button_ranking).setActivated(false);
+                            setSharedPreferencesBoolean(SHOW_RANKING_NEW, false);
                         }
                     }).create();
         }
