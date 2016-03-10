@@ -169,7 +169,6 @@ public class BaseActivity extends BaseGameActivity implements DialogInterface.On
     }
 
     protected boolean getSharedPreferencesBoolean(String preferencesKey, boolean defaultValue){
-        Toast.makeText(BaseActivity.this, "", Toast.LENGTH_SHORT).show();
         return sharedPreferences.getBoolean(preferencesKey, defaultValue);
     }
 

@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/main_menu_new_button_margin"
+        android:orientation="horizontal"
         android:weightSum="2">
         <voon.truongvan.english_for_all_level.control.EffectfulImageView
             style="@style/RankingButtonActionStyle"
@@ -46,24 +47,31 @@
         android:layout_height="wrap_content"
         style="@style/QuestionButtonStyle"
         />
-    <Button
-        android:id="@+id/answer_a"
-        style="@style/AnswerButtonStyle"
-        android:onClick="onAnswerButtonClick"
-        />
-    <Button
-        android:id="@+id/answer_b"
-        style="@style/AnswerButtonStyle"
-        android:onClick="onAnswerButtonClick"
-        />
-    <Button
-        android:id="@+id/answer_c"
-        style="@style/AnswerButtonStyle"
-        android:onClick="onAnswerButtonClick"
-        />
-    <Button
-        android:id="@+id/answer_d"
-        style="@style/AnswerButtonStyle"
-        android:onClick="onAnswerButtonClick"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/main_menu_new_button_margin">
+        <Button
+            android:id="@+id/answer_a"
+            style="@style/AnswerButtonStyle"
+            android:onClick="onAnswerButtonClick"
+            />
+        <Button
+            android:id="@+id/answer_b"
+            style="@style/AnswerButtonStyle"
+            android:onClick="onAnswerButtonClick"
+            />
+        <Button
+            android:id="@+id/answer_c"
+            style="@style/AnswerButtonStyle"
+            android:onClick="onAnswerButtonClick"
+            />
+        <Button
+            android:id="@+id/answer_d"
+            style="@style/AnswerButtonStyle"
+            android:onClick="onAnswerButtonClick"
+            />
+    </LinearLayout>
+
 </LinearLayout>

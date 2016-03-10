@@ -19,4 +19,5 @@
     <dimen name="question_margin_top">2dp</dimen>
     <dimen name="clock_height">100dp</dimen>
     <dimen name="answer_button_padding">5dp</dimen>
+    <dimen name="ranking_answer_button_radius">10dp</dimen>
 </resources>
