@@ -15,7 +15,7 @@
     <string name="download_fail_message">Can not download the file from server. Please check your internet connection.</string>
 
 
-
+    <string name="ranking">Ranking</string>
     <string name="sign_in_failed">Failed to sign in. Please check your network connection and try again.</string>
     <string name="app_misconfigured">The application is incorrectly configured. Check that the package name and signing certificate match the client ID created in Developer Console. Also, if the application is not yet published, check that the account you are trying to sign in with is listed as a tester account. See logs for more information.</string>
     <string name="license_failed">License check failed.</string>
@@ -37,4 +37,9 @@
     <string name="achievement_win_20_questions_in_a_row">CgkI4durrqoNEAIQBQ</string>
     <string name="achievement_win_30_questions_in_a_row">CgkI4durrqoNEAIQBg</string>
     <string name="achievement_win_50_questions_in_a_row">CgkI4durrqoNEAIQBw</string>
+    <string name="time_up_message">Time up</string>
+    <string name="your_score_message">Wrong answer. Your score %d.</string>
+    <string name="play_again_button">Play again</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="question_index_format">Question %d</string>
 </resources>

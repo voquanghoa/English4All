@@ -65,31 +65,9 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
         }
     }
 
-    private Dialog rankingDialog = null;
-
     public void showRanking(View view) {
-        if (rankingDialog == null) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            rankingDialog = builder.setTitle("Ranking")
-                    .setIcon(R.drawable.leaderboardall)
-                    .setMessage("Which one you want to show ?")
-                    .setPositiveButton("Leader board", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            showLeaderboard(getString(R.string.leaderboard_hight_score));
-                        }
-                    }).setNegativeButton("Achievement", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            showAchievement();
-                        }
-                    }).setOnDismissListener(new DialogInterface.OnDismissListener() {
-                        public void onDismiss(DialogInterface dialog) {
-                            findViewById(R.id.button_ranking).setActivated(false);
-                            setSharedPreferencesBoolean(SHOW_RANKING_NEW, false);
-                        }
-                    }).create();
-        }
-
-        rankingDialog.show();
+        startActivity(new Intent(this,RankingActivity.class));
+        setSharedPreferencesBoolean(SHOW_RANKING_NEW, false);
     }
 
     public void onGrammarClicked(View view) {

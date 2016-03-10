@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ranking_background"
+    >
+    <voon.truongvan.english_for_all_level.control.AppTitleControl
+        android:id="@+id/app_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
+    <voon.truongvan.english_for_all_level.control.ClockControl
+        android:id="@+id/clock"
+        android:layout_margin="@dimen/main_menu_new_button_margin"
+        android:padding="@dimen/main_menu_new_button_margin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/clock_height" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/main_menu_new_button_margin"
+        android:weightSum="2">
+        <voon.truongvan.english_for_all_level.control.EffectfulImageView
+            style="@style/RankingButtonActionStyle"
+            android:src="@drawable/ranking_leaderboard_button"
+            android:onClick="onShowLeaderBoard"
+            />
+        <voon.truongvan.english_for_all_level.control.EffectfulImageView
+            android:src="@drawable/ranking_achievement_button"
+            style="@style/RankingButtonActionStyle"
+            android:onClick="onShowAchievement"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/QuestionButtonStyle"
+        />
+    <TextView
+        android:id="@+id/textQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/QuestionButtonStyle"
+        />
+    <Button
+        android:id="@+id/answer_a"
+        style="@style/AnswerButtonStyle"
+        android:onClick="onAnswerButtonClick"
+        />
+    <Button
+        android:id="@+id/answer_b"
+        style="@style/AnswerButtonStyle"
+        android:onClick="onAnswerButtonClick"
+        />
+    <Button
+        android:id="@+id/answer_c"
+        style="@style/AnswerButtonStyle"
+        android:onClick="onAnswerButtonClick"
+        />
+    <Button
+        android:id="@+id/answer_d"
+        style="@style/AnswerButtonStyle"
+        android:onClick="onAnswerButtonClick"
+        />
 </LinearLayout>

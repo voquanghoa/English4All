@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_title_height"
+    android:padding="@dimen/app_title_padding"
+    android:background="@color/app_title_background"
+    >
+    <voon.truongvan.english_for_all_level.control.EffectfulImageView
+        android:id="@+id/app_title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_button"
+        android:adjustViewBounds="true"
+        />
+    <TextView
+        android:id="@+id/txt_title"
+        style="@style/AppTitleText"
+        />
+</RelativeLayout>

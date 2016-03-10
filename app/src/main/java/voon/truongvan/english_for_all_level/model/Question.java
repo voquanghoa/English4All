@@ -97,4 +97,9 @@ public class Question {
                 return "";
         }
     }
+
+    public boolean hasAnswer(int i){
+        String answer = getAnswer(i);
+        return answer!=null && answer.length()>0;
+    }
 }

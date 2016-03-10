@@ -74,11 +74,36 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/app_title_text</item>
         <item name="android:textSize">@dimen/app_title_font_size</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textAllCaps">true</item>
     </style>
     <style name="AdsPanel">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="RankingButtonActionStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_margin">@dimen/main_menu_new_button_margin</item>
+    </style>
+    <style name="AnswerButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/ranking_answer_normal</item>
+        <item name="android:layout_margin">@dimen/main_menu_new_button_margin</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:padding">@dimen/answer_button_padding</item>
+        <item name="android:textColor">#ffff00</item>
+    </style>
+    <style name="QuestionButtonStyle">
+        <item name="android:layout_margin">@dimen/main_menu_new_button_margin</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:padding">@dimen/answer_button_padding</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffff00</item>
     </style>
 </resources>

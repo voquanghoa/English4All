@@ -100,7 +100,7 @@ public class QuestionHelper {
     }
 
     private static String getQuestionString(ArrayList<String> lineGroup, int lineIndex){
-        String removeRegex = "^(\\d+)(\\.|\\)) ";
+        String removeRegex = "^(\\d+)(\\.|\\))( |$)";
 
         if(lineIndex < lineGroup.size()) {
             String question = lineGroup.get(lineIndex);

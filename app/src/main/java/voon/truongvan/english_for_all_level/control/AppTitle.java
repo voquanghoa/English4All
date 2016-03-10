@@ -22,8 +22,8 @@ import voon.truongvan.english_for_all_level.leaderboard.BaseGameActivity;
  * Created by Vo Quang Hoa on 12/21/2015.
  */
 public class AppTitle extends RelativeLayout {
-    private TextView centerTitle;
-    private TextView leftTitle;
+    protected TextView centerTitle;
+    protected TextView leftTitle;
 
     public AppTitle(Context context) {
         super(context);
@@ -40,7 +40,7 @@ public class AppTitle extends RelativeLayout {
         initView();
     }
 
-    private void initView(){
+    protected void initView(){
         LayoutInflater.from(getContext()).inflate(R.layout.app_title, this, true);
         this.findViewById(R.id.action_facebook).setOnClickListener(new OnClickListener() {
             public void onClick(View v) {

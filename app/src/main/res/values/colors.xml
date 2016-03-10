@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="app_title">#000000</color>
     <color name="app_title_text">#FFFFFF</color>
+    <color name="app_title_background">#3008</color>
 </resources>

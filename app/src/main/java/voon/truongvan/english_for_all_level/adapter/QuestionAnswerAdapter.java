@@ -177,7 +177,7 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
     }
 
     private void setQuestionText(Question question, TextView tvQuestion, int position) {
-        tvQuestion.setText(Html.fromHtml(showQuestionIndex?((1 + position) + ". "):"" + question.getQuestion()
+        tvQuestion.setText(Html.fromHtml((showQuestionIndex?((1 + position) + ". "):"") + question.getQuestion()
                 .replace("<u>", "").replace("</u>", "")
                 .trim()));
     }

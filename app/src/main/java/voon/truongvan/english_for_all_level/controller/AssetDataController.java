@@ -77,6 +77,9 @@ public class AssetDataController implements IDataController, AppConstant {
             ArrayList<String> lines = new ArrayList<String>();
             String mLine;
             while ((mLine = reader.readLine()) != null) {
+                if(mLine.trim().length()==0){
+                    mLine = mLine.trim();
+                }
                 lines.add(mLine);
             }
             return lines;
