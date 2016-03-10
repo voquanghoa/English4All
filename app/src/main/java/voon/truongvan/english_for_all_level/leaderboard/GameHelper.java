@@ -296,7 +296,6 @@ public class GameHelper implements GoogleApiClient.ConnectionCallbacks,
         debugLog("Setup: requested clients: " + mRequestedClients);
 
         if (mGoogleApiClientBuilder == null) {
-            // we don't have a builder yet, so create one
             createApiClientBuilder();
         }
 

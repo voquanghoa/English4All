@@ -50,7 +50,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_content_layout);
 
-        appTitle.setLeftTitleText("");
+        appTitle.setCenterTitleText("");
         listView = (ListView) findViewById(R.id.question_list_view);
         submitButton = (Button) findViewById(R.id.submit_button);
 

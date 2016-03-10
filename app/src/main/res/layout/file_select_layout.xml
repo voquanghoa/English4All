@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-    <voon.truongvan.english_for_all_level.control.AppTitle
+    <voon.truongvan.english_for_all_level.control.AppTitleControl
         android:id="@+id/app_title"
         style="@style/AppTitle" />
     <ListView
