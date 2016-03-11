@@ -2,6 +2,7 @@ package voon.truongvan.english_for_all_level;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -72,8 +73,44 @@ public class RankingActivity extends BaseActivity {
         showNextQuestion();
     }
 
+    private Runnable showLeaderBoardRunnable = new Runnable() {
+        public void run() {
+            showLeaderboard(getString(R.string.leaderboard_hight_score));
+        }
+    };
+
+    private Runnable showAchievementRunnable = new Runnable() {
+        public void run() {
+            showAchievement();
+        }
+    };
+
+    private Runnable gameCircleRunnable = null;
+
     public void onShowLeaderBoard(View view) {
-        showLeaderboard(getString(R.string.leaderboard_hight_score));
+        if(getApiClient().isConnected()) {
+            showLeaderBoardRunnable.run();
+        }else{
+            gameCircleRunnable = showLeaderBoardRunnable;
+            beginUserInitiatedSignIn();
+        }
+    }
+
+    public void onShowAchievement(View view) {
+        if(getApiClient().isConnected()) {
+            showLeaderBoardRunnable.run();
+        }else{
+            gameCircleRunnable = showAchievementRunnable;
+            beginUserInitiatedSignIn();
+        }
+    }
+
+    protected void onActivityResult(int request, int response, Intent data) {
+        super.onActivityResult(request, response, data);
+        if(gameCircleRunnable!=null){
+            gameCircleRunnable.run();
+            gameCircleRunnable=null;
+        }
     }
 
     private void onCorrect() {
@@ -145,10 +182,6 @@ public class RankingActivity extends BaseActivity {
         super.finish();
     }
 
-    public void onShowAchievement(View view) {
-        showAchievement();
-    }
-
     public void onTimeUp() {
         showMessage(getString(R.string.time_up_message));
         submit(-1);
@@ -206,5 +239,9 @@ public class RankingActivity extends BaseActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    protected boolean isGameCircleEnable() {
+        return true;
     }
 }

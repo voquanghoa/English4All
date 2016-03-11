@@ -9,6 +9,8 @@ import android.view.Window;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
 
+import voon.truongvan.english_for_all_level.util.Utils;
+
 /**
  * Created by voqua on 2/22/2016.
  */
@@ -32,13 +34,18 @@ public abstract class BaseGameActivity extends Activity implements GameHelper.Ga
      */
     protected BaseGameActivity(int requestedClients) {
         super();
-        setRequestedClients(requestedClients);
+        if(isGameCircleEnable()) {
+            setRequestedClients(requestedClients);
+        }
     }
 
     protected BaseGameActivity() {
         this(CLIENT_GAMES);
     }
 
+    protected boolean isGameCircleEnable(){
+        return false;
+    }
     /**
      * Sets the requested clients. The preferred way to set the requested clients is
      * via the constructor, but this method is available if for some reason your code
@@ -65,28 +72,36 @@ public abstract class BaseGameActivity extends Activity implements GameHelper.Ga
     protected void onCreate(Bundle b) {
         super.onCreate(b);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        if (mHelper == null) {
-            getGameHelper();
+        if(isGameCircleEnable()) {
+            if (mHelper == null) {
+                getGameHelper();
+            }
+            mHelper.setup(this);
         }
-        mHelper.setup(this);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        mHelper.onStart(this);
+        if(isGameCircleEnable()) {
+            mHelper.onStart(this);
+        }
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mHelper.onStop();
+        if(isGameCircleEnable()) {
+            mHelper.onStop();
+        }
     }
 
     @Override
     protected void onActivityResult(int request, int response, Intent data) {
         super.onActivityResult(request, response, data);
-        mHelper.onActivityResult(request, response, data);
+        if(isGameCircleEnable()) {
+            mHelper.onActivityResult(request, response, data);
+        }
     }
 
     protected GoogleApiClient getApiClient() {
@@ -138,17 +153,23 @@ public abstract class BaseGameActivity extends Activity implements GameHelper.Ga
 
     protected void showAllLeaderBoard(){
         GoogleApiClient apiClient = getGameHelper().getApiClient();
-        startActivityForResult(Games.Leaderboards.getAllLeaderboardsIntent(apiClient),2);
+        if(apiClient.isConnected()) {
+            startActivityForResult(Games.Leaderboards.getAllLeaderboardsIntent(apiClient), 2);
+        }
     }
 
     protected void showLeaderboard(String leaderBoardId){
         GoogleApiClient apiClient = getGameHelper().getApiClient();
-        startActivityForResult(Games.Leaderboards.getLeaderboardIntent(apiClient, leaderBoardId),2);
+        if(apiClient.isConnected()) {
+            startActivityForResult(Games.Leaderboards.getLeaderboardIntent(apiClient, leaderBoardId), 2);
+        }
     }
 
     protected void showAchievement(){
         GoogleApiClient apiClient = getGameHelper().getApiClient();
-        startActivityForResult(Games.Achievements.getAchievementsIntent(apiClient),2);
+        if(apiClient.isConnected()) {
+            startActivityForResult(Games.Achievements.getAchievementsIntent(apiClient), 2);
+        }
     }
 
 }

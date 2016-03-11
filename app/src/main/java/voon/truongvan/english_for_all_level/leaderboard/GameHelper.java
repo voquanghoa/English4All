@@ -671,6 +671,7 @@ public class GameHelper implements GoogleApiClient.ConnectionCallbacks,
     }
 
     void connect() {
+        new Exception().printStackTrace();
         if (mGoogleApiClient.isConnected()) {
             debugLog("Already connected.");
             return;
@@ -686,6 +687,7 @@ public class GameHelper implements GoogleApiClient.ConnectionCallbacks,
      * Disconnects the API client, then connects again.
      */
     public void reconnectClient() {
+        new Exception().printStackTrace();
         if (!mGoogleApiClient.isConnected()) {
             Log.w(TAG, "reconnectClient() called when client is not connected.");
             // interpret it as a request to connect
