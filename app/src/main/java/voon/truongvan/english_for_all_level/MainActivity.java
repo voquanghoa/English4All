@@ -1,11 +1,6 @@
 package voon.truongvan.english_for_all_level;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -20,8 +15,6 @@ import voon.truongvan.english_for_all_level.controller.OnlineDataController;
 import voon.truongvan.english_for_all_level.util.Utils;
 
 public class MainActivity extends BaseActivity implements HttpDownloadController.IDownload, AppConstant {
-
-    private SharedPreferences sharedPreferences;
     private final String SHOW_PUZZLE_NEW = "ShowPuzzleNew";
     private final String SHOW_RANKING_NEW = "ShowRankingNew";
 
@@ -116,7 +109,7 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
     }
 
     public void onDownloadProgress(int done, int total) {
-        setProgressMessage("Download " + (done / 1024) + " Kb/" + (total / 1024) + " Kb.");
+        setProgressMessage(getString(R.string.download_message_format, done / 1024, total / 1024));
     }
 
     public void onDestroy() {

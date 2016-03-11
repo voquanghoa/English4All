@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.SyncStateContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -58,7 +59,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
         currentFileName = bundle.getString(AppConstant.MESSAGE_FILE_NAME);
         currentFolder = bundle.getString(AppConstant.MESSAGE_FOLDER);
 
-        decimalFormat = new DecimalFormat("00");
+        decimalFormat = new DecimalFormat(getString(R.string.digital_format));
         timeDuration = 0;
 
         loadFileData();
@@ -186,7 +187,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
 
     public void onDownloadDone(String url, byte[] data) {
         try {
-            String fileContent = new String(data, "UTF-8");
+            String fileContent = new String(data, AppConstant.CHARSET);
             FileCachingController.getInstance().add(currentFolder+currentFileName, fileContent);
             showTestContent(OnlineDataController.getInstance().loadTestFile(fileContent));
         } catch (UnsupportedEncodingException e) {
@@ -203,6 +204,6 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
     }
 
     public void onDownloadProgress(int done, int total) {
-        setProgressMessage("Download " + (done/1024)+" Kb/" + (total/1024)+" Kb.");
+        setProgressMessage(getString(R.string.download_message_format, done / 1024, total / 1024));
     }
 }
