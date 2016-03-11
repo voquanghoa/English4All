@@ -38,10 +38,10 @@
     <string name="achievement_win_30_questions_in_a_row">CgkI4durrqoNEAIQBg</string>
     <string name="achievement_win_50_questions_in_a_row">CgkI4durrqoNEAIQBw</string>
     <string name="time_up_message">Time up</string>
-    <string name="your_score_message">Wrong answer. Your score %d.</string>
+    <string name="your_score_message" formatted="false">Wrong answer. Your score %d.</string>
     <string name="play_again_button">Play again</string>
     <string name="incorrect">Incorrect</string>
-    <string name="question_index_format">Question %d</string>
+    <string name="question_index_format" formatted="false">Question %d</string>
     <string name="digital_format">00</string>
-    <string name="download_message_format">Download %d Kb/%d Kb.</string>
+    <string name="download_message_format" formatted="false">Download %d Kb/%d Kb.</string>
 </resources>
