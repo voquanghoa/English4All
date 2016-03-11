@@ -16,6 +16,7 @@ import java.io.IOException;
 
 import voon.truongvan.english_for_all_level.control.BaseActivity;
 import voon.truongvan.english_for_all_level.control.ClockControl;
+import voon.truongvan.english_for_all_level.control.EffectImageView;
 import voon.truongvan.english_for_all_level.controller.QuestionHelper;
 import voon.truongvan.english_for_all_level.model.Question;
 import voon.truongvan.english_for_all_level.util.Utils;
@@ -29,6 +30,8 @@ public class RankingActivity extends BaseActivity {
     private int currentQuestionIndex;
     private int numOfQuestion;
     private Question currentQuestion;
+    private EffectImageView btReplay;
+    private View contentLayout;
 
     private int[] achievementScore = new int[]{
             5,
@@ -54,12 +57,25 @@ public class RankingActivity extends BaseActivity {
             R.string.achievement_win_30_questions_in_a_row,
             R.string.achievement_win_50_questions_in_a_row,
     };
+    private Runnable showLeaderBoardRunnable = new Runnable() {
+        public void run() {
+            showLeaderboard(getString(R.string.leaderboard_hight_score));
+        }
+    };
+    private Runnable showAchievementRunnable = new Runnable() {
+        public void run() {
+            showAchievement();
+        }
+    };
+    private Runnable gameCircleRunnable = null;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ranking_layout);
         appTitle.setText(getString(R.string.ranking));
         clockControl = ((ClockControl) findViewById(R.id.clock));
+        btReplay = (EffectImageView) findViewById(R.id.btReplay);
+
         clockControl.setOnEnded(new Runnable() {
             public void run() {
                 RankingActivity.this.runOnUiThread(new Runnable() {
@@ -69,37 +85,26 @@ public class RankingActivity extends BaseActivity {
                 });
             }
         });
+        contentLayout = findViewById(R.id.content_layout);
+        btReplay.setVisibility(View.GONE);
+
         arrayOfIndex = Utils.getRandomArray(100);
         showNextQuestion();
     }
 
-    private Runnable showLeaderBoardRunnable = new Runnable() {
-        public void run() {
-            showLeaderboard(getString(R.string.leaderboard_hight_score));
-        }
-    };
-
-    private Runnable showAchievementRunnable = new Runnable() {
-        public void run() {
-            showAchievement();
-        }
-    };
-
-    private Runnable gameCircleRunnable = null;
-
     public void onShowLeaderBoard(View view) {
-        if(getApiClient().isConnected()) {
+        if (getApiClient().isConnected()) {
             showLeaderBoardRunnable.run();
-        }else{
+        } else {
             gameCircleRunnable = showLeaderBoardRunnable;
             beginUserInitiatedSignIn();
         }
     }
 
     public void onShowAchievement(View view) {
-        if(getApiClient().isConnected()) {
+        if (getApiClient().isConnected()) {
             showLeaderBoardRunnable.run();
-        }else{
+        } else {
             gameCircleRunnable = showAchievementRunnable;
             beginUserInitiatedSignIn();
         }
@@ -107,9 +112,9 @@ public class RankingActivity extends BaseActivity {
 
     protected void onActivityResult(int request, int response, Intent data) {
         super.onActivityResult(request, response, data);
-        if(gameCircleRunnable!=null){
+        if (gameCircleRunnable != null) {
             gameCircleRunnable.run();
-            gameCircleRunnable=null;
+            gameCircleRunnable = null;
         }
     }
 
@@ -117,14 +122,20 @@ public class RankingActivity extends BaseActivity {
         showNextQuestion();
     }
 
-    private void showGameOver() {
+    private void showGameOver(boolean isTimeUp) {
+        contentLayout.setEnabled(true);
+        int messageStringId = isTimeUp ? R.string.time_up_message : R.string.your_score_message;
+        String title = getString(isTimeUp ? R.string.time_up : R.string.incorrect);
+        String message = getString(messageStringId, numOfQuestion - 1, currentQuestion.getCorrectAnswerAsString());
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        AlertDialog rankingDialog = builder.setTitle(R.string.incorrect)
+        AlertDialog rankingDialog = builder.setTitle(Html.fromHtml(title))
                 .setIcon(R.drawable.leaderboardall)
-                .setMessage(getString(R.string.your_score_message, numOfQuestion - 1))
-                .setPositiveButton(getString(R.string.finish), new DialogInterface.OnClickListener() {
+                .setMessage(Html.fromHtml(message))
+                .setPositiveButton(getString(R.string.review), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        finish();
+                        btReplay.setVisibility(View.VISIBLE);
+                        clockControl.setVisibility(View.GONE);
                     }
                 }).setNegativeButton(R.string.play_again_button, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
@@ -134,13 +145,23 @@ public class RankingActivity extends BaseActivity {
                 }).create();
         rankingDialog.setCancelable(false);
         rankingDialog.show();
-
     }
 
-    private void onIncorrect() {
+    public void onReplay(View view) {
+        numOfQuestion = 0;
+        showNextQuestion();
+    }
+
+    private void enableAnswerButtons(boolean isEnable) {
+        for (int i = 0; i < answerIds.length; i++) {
+            findViewById(answerIds[i]).setEnabled(isEnable);
+        }
+    }
+
+    private void onIncorrect(final boolean isTimeUp) {
         clockControl.setVisibility(View.INVISIBLE);
         GoogleApiClient apiClient = getApiClient();
-        if(apiClient.isConnected()){
+        if (apiClient.isConnected()) {
             Games.Leaderboards.submitScore(apiClient, getString(R.string.leaderboard_hight_score), numOfQuestion - 1);
             for (int i = 0; i < achievementScore.length; i++) {
                 if (numOfQuestion > achievementScore[i]) {
@@ -148,15 +169,29 @@ public class RankingActivity extends BaseActivity {
                 }
             }
         }
+        enableAnswerButtons(false);
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        showGameOver(isTimeUp);
+                    }
+                });
+            }
+        }).start();
 
-        showGameOver();
     }
 
-    public void onAnswerButtonClick(View view){
+    public void onAnswerButtonClick(View view) {
         clockControl.stop();
         int id = view.getId();
-        for(int i=0;i<answerIds.length;i++){
-            if(id == answerIds[i]){
+        for (int i = 0; i < answerIds.length; i++) {
+            if (id == answerIds[i]) {
                 submit(i);
                 return;
             }
@@ -169,12 +204,15 @@ public class RankingActivity extends BaseActivity {
             if (currentQuestion.checkCorrectAnswer(userAnswer)) {
                 selectedButton.setBackgroundResource(R.drawable.ranking_answer_correct);
                 onCorrect();
-                return;
             } else {
-                selectedButton.setBackgroundResource(R.drawable.ranking_answer_correct);
+                findViewById(answerIds[currentQuestion.getCorrectAnswer()])
+                        .setBackgroundResource(R.drawable.ranking_answer_correct);
+                selectedButton.setBackgroundResource(R.drawable.ranking_answer_wrong);
+                onIncorrect(false);
             }
+        } else {
+            onIncorrect(true);
         }
-        onIncorrect();
     }
 
     public void finish() {
@@ -225,7 +263,9 @@ public class RankingActivity extends BaseActivity {
 
     private void showNextQuestion() {
         clockControl.start();
+        btReplay.setVisibility(View.GONE);
         clockControl.setVisibility(View.VISIBLE);
+        enableAnswerButtons(true);
         currentQuestionIndex++;
 
         if (currentQuestionIndex >= arrayOfIndex.length) {

@@ -49,7 +49,7 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
     }
 
     public void resetUserSelection(){
-        Arrays.fill(userSelection,-1);
+        Arrays.fill(userSelection, -1);
     }
     public void notifyDataSetChanged() {
         if(this.userSelection.length<this.getCount()){
@@ -170,10 +170,6 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
                 radioButton.setVisibility(View.VISIBLE);
             }
         }
-    }
-
-    public void setShowQuestionIndex(boolean isShow){
-        showQuestionIndex = isShow;
     }
 
     private void setQuestionText(Question question, TextView tvQuestion, int position) {

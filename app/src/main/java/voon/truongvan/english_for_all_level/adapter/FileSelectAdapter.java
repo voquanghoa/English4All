@@ -27,10 +27,10 @@ public class FileSelectAdapter extends BaseAdapter {
     private FileSelectFeedback selectFeedback;
 
     public FileSelectAdapter(Context context, DataItem dataItem, FileSelectFeedback selectFeedback){
-        setDisplayDataItem(dataItem);
         this.context = context;
         this.pathStack = new Stack<DataItem>();
         this.selectFeedback = selectFeedback;
+        setDisplayDataItem(dataItem);
     }
 
     public boolean showParent(){
@@ -44,6 +44,7 @@ public class FileSelectAdapter extends BaseAdapter {
     public void setDisplayDataItem(DataItem dataItem){
         this.dataItem = dataItem;
         this.children = dataItem.getChildren();
+        selectFeedback.onShowItem(dataItem);
         if(this.children == null){
             this.children = new ArrayList<DataItem>();
         }
@@ -147,6 +148,7 @@ public class FileSelectAdapter extends BaseAdapter {
     public interface FileSelectFeedback {
         void customCommand(DataItem dataItem);
 
+        void onShowItem(DataItem dataItem);
         void openFile(String filePath);
     }
 }

@@ -2,6 +2,7 @@
     <string name="app_name">English for all level</string>
     <string name="loading">Loading...</string>
     <string name="submit">Submit</string>
+    <string name="review">Review</string>
     <string name="finish">Finish</string>
     <string name="dialog_result_title">This is result</string>
     <string name="dialog_result_content" formatted="false">Correct: %2d/%2d \nTime test: </string>
@@ -37,10 +38,17 @@
     <string name="achievement_win_20_questions_in_a_row">CgkI4durrqoNEAIQBQ</string>
     <string name="achievement_win_30_questions_in_a_row">CgkI4durrqoNEAIQBg</string>
     <string name="achievement_win_50_questions_in_a_row">CgkI4durrqoNEAIQBw</string>
-    <string name="time_up_message">Time up</string>
-    <string name="your_score_message" formatted="false">Wrong answer. Your score %d.</string>
+    <string name="your_score_message" formatted="false">
+        <![CDATA[Wrong answer. Your score %d.<br/>The correct answer is <font color="#108900">%s</font>.]]>
+    </string>
+    <string name="time_up_message" formatted="false">
+        <![CDATA[Time&#39;s up. Your score %d.<br/>The correct answer is <font color="#108900">%s</font>.]]>
+    </string>
     <string name="play_again_button">Play again</string>
     <string name="incorrect">Incorrect</string>
+    <string name="time_up" formatted="false">
+        <![CDATA[Time&#39;s up]]>
+    </string>
     <string name="question_index_format" formatted="false">Question %d</string>
     <string name="digital_format">00</string>
     <string name="download_message_format" formatted="false">Download %d Kb/%d Kb.</string>

@@ -41,6 +41,10 @@ public abstract class FileSelectionActivity extends BaseActivity implements File
 
     }
 
+    public void onShowItem(DataItem dataItem) {
+        appTitle.setText(dataItem.getDisplay());
+    }
+
     public void openFile(String filePath) {
         Intent intent = new Intent(this, QuestionListActivity.class);
         Bundle bundle = new Bundle();

@@ -58,12 +58,16 @@ public class Question {
         return correctAnswer;
     }
 
-    public boolean checkCorrectAnswer(int index){
-        return correctAnswer==index;
-    }
-
     public void setCorrectAnswer(int correctAnswer) {
         this.correctAnswer = correctAnswer;
+    }
+
+    public String getCorrectAnswerAsString() {
+        return getAnswer(correctAnswer).trim();
+    }
+
+    public boolean checkCorrectAnswer(int index) {
+        return correctAnswer == index;
     }
 
     public String getCategory() {
@@ -74,12 +78,12 @@ public class Question {
         return category!=null && category.length()>0;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public boolean isCategory(){
         return this.category!=null && this.category.length()>0;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getAnswer(int index){
