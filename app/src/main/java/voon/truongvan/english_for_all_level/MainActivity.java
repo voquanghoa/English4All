@@ -53,7 +53,7 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
     public void onPuzzleClick(View view) {
         findViewById(R.id.button_puzzle).setActivated(false);
         setSharedPreferencesBoolean(SHOW_PUZZLE_NEW, false);
-        showMessage("Will implement later");
+        findViewById(R.id.button_puzzle).setActivated(false);
     }
 
     public void onBackPressed() {
@@ -66,8 +66,9 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
     }
 
     public void showRanking(View view) {
-        startActivity(new Intent(this,RankingActivity.class));
+        startActivity(new Intent(this, RankingActivity.class));
         setSharedPreferencesBoolean(SHOW_RANKING_NEW, false);
+        findViewById(R.id.button_ranking).setActivated(false);
     }
 
     public void onGrammarClicked(View view) {
