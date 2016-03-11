@@ -23,12 +23,12 @@
         android:padding="@dimen/main_menu_new_button_margin"
         android:orientation="horizontal"
         android:weightSum="2">
-        <voon.truongvan.english_for_all_level.control.EffectfulImageView
+        <voon.truongvan.english_for_all_level.control.EffectImageView
             style="@style/RankingButtonActionStyle"
             android:src="@drawable/ranking_leaderboard_button"
             android:onClick="onShowLeaderBoard"
             />
-        <voon.truongvan.english_for_all_level.control.EffectfulImageView
+        <voon.truongvan.english_for_all_level.control.EffectImageView
             android:src="@drawable/ranking_achievement_button"
             style="@style/RankingButtonActionStyle"
             android:onClick="onShowAchievement"

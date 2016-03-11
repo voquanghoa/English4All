@@ -24,7 +24,7 @@
             <ImageView
                 style="@style/MainMenuItemIcon"
                 android:src="@drawable/main_menu_grammar_icon" />
-            <voon.truongvan.english_for_all_level.control.EffectfulImageView
+            <voon.truongvan.english_for_all_level.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:adjustViewBounds="true"
                 android:onClick="onGrammarClicked"
@@ -32,7 +32,7 @@
         </LinearLayout>
         <LinearLayout style="@style/MainMenuItemRow"
             android:gravity="right">
-            <voon.truongvan.english_for_all_level.control.EffectfulImageView
+            <voon.truongvan.english_for_all_level.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:onClick="onExaminationClick"
                 android:src="@drawable/main_menu_examination_button" />
@@ -46,7 +46,7 @@
                 style="@style/MainMenuItemIcon"
                 android:src="@drawable/main_menu_study_offline_icon" />
 
-            <voon.truongvan.english_for_all_level.control.EffectfulImageView
+            <voon.truongvan.english_for_all_level.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:onClick="onStudyOfflineClick"
                 android:src="@drawable/main_menu_study_offline_button" />
@@ -54,7 +54,7 @@
         <LinearLayout style="@style/MainMenuItemRow"
             android:gravity="right"
             >
-            <voon.truongvan.english_for_all_level.control.EffectfulImageView
+            <voon.truongvan.english_for_all_level.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:onClick="onListenExerciseClick"
                 android:src="@drawable/main_menu_listen_button" />
@@ -66,7 +66,7 @@
             <ImageView
                 style="@style/MainMenuItemIcon"
                 android:src="@drawable/main_menu_ranking_icon" />
-            <voon.truongvan.english_for_all_level.control.EffectfulImageView
+            <voon.truongvan.english_for_all_level.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:id="@+id/button_ranking"
                 android:onClick="showRanking"
@@ -75,7 +75,7 @@
         <LinearLayout style="@style/MainMenuItemRow"
             android:gravity="right"
             >
-            <voon.truongvan.english_for_all_level.control.EffectfulImageView
+            <voon.truongvan.english_for_all_level.control.EffectImageView
                 android:id="@+id/button_puzzle"
                 style="@style/MainMenuItemButton"
                 android:onClick="onPuzzleClick"

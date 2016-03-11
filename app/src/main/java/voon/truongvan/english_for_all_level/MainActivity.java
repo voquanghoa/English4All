@@ -53,7 +53,7 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
     public void onPuzzleClick(View view) {
         findViewById(R.id.button_puzzle).setActivated(false);
         setSharedPreferencesBoolean(SHOW_PUZZLE_NEW, false);
-        startActivity(new Intent(this, ContestActivity.class));
+        showMessage("Will implement later");
     }
 
     public void onBackPressed() {

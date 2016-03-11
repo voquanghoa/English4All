@@ -6,7 +6,7 @@
     android:padding="@dimen/app_title_padding"
     android:background="@color/app_title_background"
     >
-    <voon.truongvan.english_for_all_level.control.EffectfulImageView
+    <voon.truongvan.english_for_all_level.control.EffectImageView
         android:id="@+id/app_title_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -24,7 +24,7 @@ import voon.truongvan.english_for_all_level.leaderboard.BaseGameActivity;
  * Created by voqua on 12/20/2015.
  */
 public class BaseActivity extends BaseGameActivity implements DialogInterface.OnCancelListener, AppConstant {
-    protected AppTitle appTitle;
+    protected AppTitleControl appTitle;
     private ProgressDialog progressDialog;
     private AdView adView;
     private static AdRequest adRequest;
@@ -68,7 +68,7 @@ public class BaseActivity extends BaseGameActivity implements DialogInterface.On
 
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
-        appTitle = (AppTitle) findViewById(R.id.app_title);
+        appTitle = (AppTitleControl) findViewById(R.id.app_title);
         RelativeLayout adsLayout = (RelativeLayout)findViewById(R.id.adView);
         if(adsLayout!=null){
             String AD_UNIT_ID = getString(R.string.admob_id);

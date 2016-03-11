@@ -37,7 +37,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
     private Button submitButton;
     private Runnable setTitleText = new Runnable() {
         public void run() {
-            QuestionActivityBase.this.appTitle.setCenterTitleText(getDurationTime());
+            QuestionActivityBase.this.appTitle.setText(getDurationTime());
         }
     };
     private boolean isDelayFinish = true;
@@ -50,7 +50,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_content_layout);
 
-        appTitle.setCenterTitleText("");
+        appTitle.setText("");
         listView = (ListView) findViewById(R.id.question_list_view);
         submitButton = (Button) findViewById(R.id.submit_button);
 

@@ -57,7 +57,7 @@ public class RankingActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ranking_layout);
-        appTitle.setCenterTitleText(getString(R.string.ranking));
+        appTitle.setText(getString(R.string.ranking));
         clockControl = ((ClockControl) findViewById(R.id.clock));
         clockControl.setOnEnded(new Runnable() {
             public void run() {
@@ -200,7 +200,7 @@ public class RankingActivity extends BaseActivity {
             arrayOfIndex = Utils.getRandomArray(100);
         }
 
-        appTitle.setCenterTitleText(getString(R.string.question_index_format, ++numOfQuestion));
+        appTitle.setText(getString(R.string.question_index_format, ++numOfQuestion));
         try {
             showQuestion(arrayOfIndex[currentQuestionIndex]);
         } catch (IOException e) {
