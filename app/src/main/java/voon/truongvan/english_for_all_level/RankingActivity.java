@@ -103,7 +103,7 @@ public class RankingActivity extends BaseActivity {
 
     public void onShowAchievement(View view) {
         if (getApiClient().isConnected()) {
-            showLeaderBoardRunnable.run();
+            showAchievementRunnable.run();
         } else {
             gameCircleRunnable = showAchievementRunnable;
             beginUserInitiatedSignIn();
