@@ -9,7 +9,6 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 
-import voon.truongvan.english_for_all_level.R;
 import voon.truongvan.english_for_all_level.util.SafeThread;
 
 /**
@@ -25,6 +24,22 @@ public class ClockControl extends View{
     private Paint paint = null;
     private SafeThread thread = null;
     private Runnable onEnded;
+    private Runnable invalidateRunnable = new Runnable() {
+        public synchronized void run() {
+            ClockControl.this.invalidate();
+            second--;
+            if (second == -1) {
+                second = 0;
+                onEnded.run();
+                thread.cancel();
+            }
+        }
+    };
+    private Runnable updateRunnable = new Runnable() {
+        public synchronized void run() {
+            ((Activity) getContext()).runOnUiThread(invalidateRunnable);
+        }
+    };
 
     public ClockControl(Context context) {
         super(context);
@@ -50,34 +65,17 @@ public class ClockControl extends View{
         paint.setAntiAlias(true);
     }
 
-    public void setOnEnded(Runnable onEnded){
+    public void setOnEnded(Runnable onEnded) {
         this.onEnded = onEnded;
     }
 
-    public synchronized void stop(){
-        if(thread!=null){
+    public synchronized void stop() {
+        if (thread != null) {
             thread.cancel();
         }
         thread = null;
     }
 
-    private Runnable invalidateRunnable = new Runnable() {
-        public synchronized void run() {
-            ClockControl.this.invalidate();
-            second --;
-            if(second==-1){
-                second=0;
-                onEnded.run();
-                thread.cancel();
-            }
-        }
-    };
-
-    private Runnable updateRunnable = new Runnable() {
-        public synchronized void run() {
-            ((Activity)getContext()).runOnUiThread(invalidateRunnable);
-        }
-    };
     public synchronized void start(){
         stop();
         second = DEFAULT_INTERVAL;
@@ -89,23 +87,27 @@ public class ClockControl extends View{
 
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        float standardSize = Math.min(canvas.getHeight(), canvas.getWidth());
-        float halfWidth = canvas.getWidth()/2;
-        float halfHeight = canvas.getHeight()/2;
+        int width = this.getWidth();
+        int height = this.getHeight();
+
+        float standardSize = Math.min(width, height);
+
+        float halfWidth = width / 2;
+        float halfHeight = height / 2;
 
         if(fontSize==-1){
-            fontSize = getFixedFontSize((int)(canvas.getHeight()*TEXT_HEIGHT_PERCENT/100));
+            fontSize = getFixedFontSize((int) (height * TEXT_HEIGHT_PERCENT / 100));
             paint.setTextSize(fontSize);
         }
 
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
-        canvas.drawText("" + second, halfWidth, (1 + TEXT_HEIGHT_PERCENT / 100) * canvas.getHeight() / 2, paint);
+        canvas.drawText("" + second, halfWidth, (1 + TEXT_HEIGHT_PERCENT / 100) * height / 2, paint);
 
         float strokeWidth = STROKE_PERCENT*standardSize/100;
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.WHITE);
         paint.setStrokeWidth(strokeWidth);
-        canvas.drawOval(halfWidth-halfHeight+strokeWidth,strokeWidth,halfWidth+halfHeight-strokeWidth, canvas.getHeight()-strokeWidth, paint);
+        canvas.drawOval(halfWidth - halfHeight + strokeWidth, strokeWidth, halfWidth + halfHeight - strokeWidth, height - strokeWidth, paint);
     }
 
     private int getFixedFontSize(int height){
