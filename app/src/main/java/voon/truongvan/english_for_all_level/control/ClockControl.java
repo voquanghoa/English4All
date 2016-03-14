@@ -6,68 +6,13 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
 import voon.truongvan.english_for_all_level.util.SafeThread;
 
-/**
- * Created by voqua on 3/7/2016.
- */
-public class ClockControl extends View{
-    private int fontSize=-1;
-    private int second=10;
-    private float STROKE_PERCENT = 2;
-    private float TEXT_HEIGHT_PERCENT = 45;
-    private int DEFAULT_INTERVAL = 30;
-
-    private Paint paint = null;
-    private SafeThread thread = null;
-    private Runnable onEnded;
-    private Runnable invalidateRunnable = new Runnable() {
-        public synchronized void run() {
-            ClockControl.this.invalidate();
-            second--;
-            if (second == -1) {
-                second = 0;
-                onEnded.run();
-                thread.cancel();
-            }
-        }
-    };
-    private Runnable updateRunnable = new Runnable() {
-        public synchronized void run() {
-            ((Activity) getContext()).runOnUiThread(invalidateRunnable);
-        }
-    };
-
-    public ClockControl(Context context) {
-        super(context);
-        init();
-    }
-
-    public ClockControl(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init();
-    }
-
-    public ClockControl(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init();
-    }
-
-    private void init(){
-        paint = new Paint();
-        paint.setColor(Color.BLACK);
-
-        paint.setTextAlign(Paint.Align.CENTER);
-        paint.setAlpha(0);
-        paint.setAntiAlias(true);
-    }
-
-    public void setOnEnded(Runnable onEnded) {
-        this.onEnded = onEnded;
-    }
+/** Created by voqua on 3/7/2016. */ public class ClockControl extends View{ private int fontSize=-1; private int second=10; private float STROKE_PERCENT = 2; private float TEXT_HEIGHT_PERCENT = 45; private int DEFAULT_INTERVAL = 30; private Paint paint = null; private SafeThread thread = null; private Runnable onEnded; private Runnable invalidateRunnable = new Runnable() { public synchronized void run() { ClockControl.this.invalidate(); second--; if (second == -1) { second = 0; onEnded.run(); thread.cancel(); } } }; private Runnable updateRunnable = new Runnable() { public synchronized void run() { ((Activity) getContext()).runOnUiThread(invalidateRunnable); } }; public ClockControl(Context context) { super(context); init(); } public ClockControl(Context context, AttributeSet attrs) { super(context, attrs); init(); } public ClockControl(Context context, AttributeSet attrs, int defStyleAttr) { super(context, attrs, defStyleAttr); init(); } private void init(){ paint = new Paint(); paint.setColor(Color.BLACK); paint.setTextAlign(Paint.Align.CENTER); paint.setAlpha(0); paint.setAntiAlias(true); } public void setOnEnded(Runnable onEnded) { this.onEnded = onEnded; }
 
     public synchronized void stop() {
         if (thread != null) {
@@ -107,7 +52,9 @@ public class ClockControl extends View{
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.WHITE);
         paint.setStrokeWidth(strokeWidth);
-        canvas.drawOval(halfWidth - halfHeight + strokeWidth, strokeWidth, halfWidth + halfHeight - strokeWidth, height - strokeWidth, paint);
+        RectF rectF = new RectF(halfWidth - halfHeight + strokeWidth, strokeWidth,
+                halfWidth + halfHeight - strokeWidth, height - strokeWidth);
+        canvas.drawOval(rectF, paint);
     }
 
     private int getFixedFontSize(int height){
