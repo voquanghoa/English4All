@@ -179,6 +179,7 @@ public class QuestionHelper {
 
     public static Question getQuestion(Context context, int questionId) throws IOException {
         BufferedReader reader = null;
+        Utils.Log("Question Id " + questionId);
 
         try {
             reader = new BufferedReader(new InputStreamReader(context.getAssets().open(AppConstant.INDEX_DATA_FILE)));
@@ -189,6 +190,7 @@ public class QuestionHelper {
                     if(strs.length>0){
                         int index = Integer.parseInt(strs[0]);
                         if(index>questionId){
+                            Utils.Log("Question -> " + strs[1] + " at " + index);
                             TestContent testContent = AssetDataController.getInstance().loadTestFile(context,strs[1]);
                             List<Question> questions = testContent.getQuestions();
                             int innerQuestionId = questions.size()+questionId-index;
