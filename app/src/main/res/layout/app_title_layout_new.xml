@@ -8,16 +8,18 @@
     >
     <voon.truongvan.english_for_all_level.control.EffectImageView
         android:id="@+id/app_title_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/back_button"
+        style="@style/AppTitleIcon"
         />
     <TextView
         android:id="@+id/txt_title"
         style="@style/AppTitleText"
-        android:layout_width="match_parent"
-        android:layout_toRightOf="@+id/app_title_back"
-        android:gravity="center"
+        android:layout_toLeftOf="@+id/app_title_back_holder"
+        android:layout_toRightOf="@+id/app_title_back" />
+
+    <voon.truongvan.english_for_all_level.control.EffectImageView
+        android:id="@+id/app_title_back_holder"
+        style="@style/AppTitleIcon"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
         />
 </RelativeLayout>
