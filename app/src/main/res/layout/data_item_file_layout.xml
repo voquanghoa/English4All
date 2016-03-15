@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/RowItemStyle"
     android:id="@+id/file_data_item_select_layout"
+    style="@style/RowItemStyle"
+    android:background="@drawable/list_view_file_item_background"
     >
-    <ImageView
-        android:id="@+id/row_icon"
-        android:layout_width="@dimen/list_icon_size"
-        android:layout_height="@dimen/list_icon_size"
-        android:adjustViewBounds="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/test_english_icon"
-        />
     <TextView
         android:id="@+id/button_main_menu"
+        style="@style/FolderItemText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:layout_centerVertical="true"
-        android:text="Button"
-        android:layout_toRightOf="@+id/row_icon"
         android:layout_toLeftOf="@+id/text_badge"
-        style="@style/FolderItemText"
+        android:layout_toRightOf="@+id/row_icon"
+        android:gravity="center"
+        android:text="Button"
+        android:textColor="@color/white"
         />
     <TextView
         android:id="@+id/text_badge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:text="8/10"
         android:layout_alignParentRight="true"
-        android:textColor="#fff"
+        android:layout_centerVertical="true"
         android:background="@drawable/green_badge"
+        android:padding="5dp"
+        android:text="8/10"
+        android:textColor="#fff"
         android:textSize="11sp"
         android:textStyle="bold"
-        android:padding="5dp"
         />
 </RelativeLayout>

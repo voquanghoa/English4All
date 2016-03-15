@@ -14,10 +14,14 @@
     <dimen name="app_title_padding">5dp</dimen>
     <dimen name="app_title_text_space">10dp</dimen>
 
-    <dimen name="row_button_height">50dp</dimen>
+    <dimen name="row_button_height">40dp</dimen>
     <dimen name="question_margin_bottom">5dp</dimen>
     <dimen name="question_margin_top">2dp</dimen>
     <dimen name="clock_height">100dp</dimen>
     <dimen name="answer_button_padding">5dp</dimen>
     <dimen name="ranking_answer_button_radius">10dp</dimen>
+    <dimen name="list_view_item_padding">5dp</dimen>
+    <dimen name="list_view_folder_padding">10dp</dimen>
+    <dimen name="question_margin">5dp</dimen>
+    <dimen name="submit_button_margin">5dp</dimen>
 </resources>

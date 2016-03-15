@@ -6,4 +6,6 @@
     <color name="app_title">#000000</color>
     <color name="app_title_text">#FFFFFF</color>
     <color name="app_title_background">#202a</color>
+
+    <color name="white">#FFF</color>
 </resources>

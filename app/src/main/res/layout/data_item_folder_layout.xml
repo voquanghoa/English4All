@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/RowItemStyle"
     android:id="@+id/folder_data_item_select_layout"
+    style="@style/RowItemStyle"
+    android:layout_marginLeft="@dimen/list_view_folder_padding"
+    android:layout_marginRight="@dimen/list_view_folder_padding"
+    android:background="@drawable/list_view_folder_item_background"
     >
-    <ImageView
-        android:id="@+id/row_icon"
-        android:layout_width="@dimen/list_icon_size"
-        android:layout_height="@dimen/list_icon_size"
-        android:adjustViewBounds="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/folder_test"
-        />
     <TextView
         android:id="@+id/button_main_menu"
+        style="@style/FolderItemText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:layout_centerVertical="true"
+        android:gravity="center"
         android:text="Button"
-        android:layout_toRightOf="@+id/row_icon"
-        style="@style/FolderItemText"
         />
 </RelativeLayout>

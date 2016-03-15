@@ -159,7 +159,7 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
             String answer = question.getAnswer(i);
             if(showAnswer){
                 radioButton.setText(Html.fromHtml(QuestionHelper.convertToColor(answer,
-                        question.checkCorrectAnswer(i) ? "blue" : "black")));
+                        question.checkCorrectAnswer(i) ? "blue" : "whit")));
             }else {
                 radioButton.setText(Html.fromHtml(answer));
             }
@@ -201,7 +201,7 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
 
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(buttonView.isChecked()){
-            int questionIndex = Integer.decode(buttonView.getTag().toString()).intValue();
+            int questionIndex = Integer.decode(buttonView.getTag().toString());
             int viewId = buttonView.getId();
 
             for(int id=0;id<radioButtonId.length;id++) {

@@ -4,9 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.SyncStateContract;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.android.gms.ads.AdListener;
@@ -35,7 +33,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
     private int timeDuration = 0;
     private boolean isStopTimer = false;
     private DecimalFormat decimalFormat;
-    private Button submitButton;
+    private EffectImageView submitButton;
     private Runnable setTitleText = new Runnable() {
         public void run() {
             QuestionActivityBase.this.appTitle.setText(getDurationTime());
@@ -53,7 +51,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
 
         appTitle.setText("");
         listView = (ListView) findViewById(R.id.question_list_view);
-        submitButton = (Button) findViewById(R.id.submit_button);
+        submitButton = (EffectImageView) findViewById(R.id.submit_button);
 
         Bundle bundle = getIntent().getExtras();
         currentFileName = bundle.getString(AppConstant.MESSAGE_FILE_NAME);
@@ -126,7 +124,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
                     .setPositiveButton(R.string.dialog_result_button, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             questionAnswerAdapter.setShowAnswer(true);
-                            submitButton.setText(R.string.finish);
+                            //submitButton.setText(R.string.finish);
 
                         }
                     });
@@ -199,7 +197,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
 
     public void onDownloadFail(String message) {
         closeLoadingDialog();
-        submitButton.setText(R.string.finish);
+        //submitButton.setText(R.string.finish);
         showMessage(R.string.download_fail_message);
     }
 

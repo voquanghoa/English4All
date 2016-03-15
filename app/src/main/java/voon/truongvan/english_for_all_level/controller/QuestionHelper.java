@@ -21,7 +21,7 @@ public class QuestionHelper {
     public static TestContent readQuestion(ArrayList<String> lines){
         ArrayList<ArrayList<String>> lineGroups = analystLines(lines);
         TestContent testContent = new TestContent();
-        List<Question> questions = new ArrayList<Question>();
+        List<Question> questions = new ArrayList<>();
         for(ArrayList<String> group : lineGroups){
             questions.add(createQuestion(group));
         }
@@ -32,8 +32,7 @@ public class QuestionHelper {
 
     public static String convertToColor(String originalString, String colorCode){
         String clearColor = originalString.replace("color='red'", "color='" + colorCode + "'");
-        String result = "<font color='"+colorCode+"'>" + clearColor +"</font>";
-        return result;
+        return "<font color='" + colorCode + "'>" + clearColor + "</font>";
     }
 
     private static Question createQuestion(ArrayList<String> lineGroup){
@@ -100,7 +99,7 @@ public class QuestionHelper {
     }
 
     private static String getQuestionString(ArrayList<String> lineGroup, int lineIndex){
-        String removeRegex = "^(\\d+)(\\.|\\))( |$)";
+        String removeRegex = "^(\\d+)(\\.|\\))*( |$|-)";
 
         if(lineIndex < lineGroup.size()) {
             String question = lineGroup.get(lineIndex);
@@ -141,8 +140,8 @@ public class QuestionHelper {
     }
 
     private static boolean isCharInSet(char ch, char ... set){
-        for(int i=0; i<set.length; i++){
-            if(ch == set[i]){
+        for (char aSet : set) {
+            if (ch == aSet) {
                 return true;
             }
         }
@@ -158,9 +157,9 @@ public class QuestionHelper {
 
     private static ArrayList<ArrayList<String>> analystLines(ArrayList<String> lines){
         int firstLine = 0;
-        ArrayList<ArrayList<String>> lineGroup = new ArrayList<ArrayList<String>>();
+        ArrayList<ArrayList<String>> lineGroup = new ArrayList<>();
         while(firstLine < lines.size()){
-            ArrayList<String> group = new ArrayList<String>();
+            ArrayList<String> group = new ArrayList<>();
 
             while(firstLine < lines.size() && lines.get(firstLine).length()==0) {
                 firstLine++;

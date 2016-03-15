@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/quiz_background"
     android:orientation="vertical">
-
     <voon.truongvan.english_for_all_level.control.AppTitleControl
         android:id="@+id/app_title"
         style="@style/AppTitle" />
@@ -14,16 +14,19 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/submit_button"
         android:layout_below="@id/app_title"
+        android:divider="@null"
         >
     </ListView>
-    <Button
+
+    <voon.truongvan.english_for_all_level.control.EffectImageView
         android:id="@+id/submit_button"
-        style="@style/CategoryButtonText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/row_button_height"
-        android:onClick="onSubmit"
-        android:text="@string/submit"
         android:layout_above="@+id/adView"
+        android:layout_margin="@dimen/submit_button_margin"
+        android:adjustViewBounds="true"
+        android:onClick="onSubmit"
+        android:src="@drawable/submit"
         />
     <RelativeLayout
         android:id="@+id/adView"
