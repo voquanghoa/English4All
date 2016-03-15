@@ -24,4 +24,12 @@
     <dimen name="list_view_folder_padding">10dp</dimen>
     <dimen name="question_margin">5dp</dimen>
     <dimen name="submit_button_margin">5dp</dimen>
+
+    <dimen name="radio_button_result_size">13dp</dimen>
+    <dimen name="radio_button_size">20dp</dimen>
+    <dimen name="radio_button_dot_size">12dp</dimen>
+    <dimen name="radio_button_border_size">2dp</dimen>
+    <dimen name="radio_button_padding">4dp</dimen>
+    <dimen name="question_spacing">15dp</dimen>
+    <dimen name="listen_text_size">17sp</dimen>
 </resources>

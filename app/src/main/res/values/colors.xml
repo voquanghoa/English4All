@@ -8,4 +8,12 @@
     <color name="app_title_background">#202a</color>
 
     <color name="white">#FFF</color>
+
+    <color name="answer_correct_color">#ffff00</color>
+    <color name="answer_incorrect_color">#ff0000</color>
+    <color name="answer_normal_color">#ffffff</color>
+
+    <color name="list_view_file_background_color">#6567e6c4</color>
+    <color name="radio_button_color">#60cf20</color>
+    <color name="radio_button_pressed_color">#00ff00</color>
 </resources>

@@ -7,14 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.Arrays;
 
 import voon.truongvan.english_for_all_level.R;
+import voon.truongvan.english_for_all_level.control.AnswerRadioButton;
 import voon.truongvan.english_for_all_level.controller.QuestionHelper;
 import voon.truongvan.english_for_all_level.model.Question;
 import voon.truongvan.english_for_all_level.model.TestContent;
@@ -23,7 +22,7 @@ import voon.truongvan.english_for_all_level.util.ViewUtils;
 /**
  * Created by Vo Quang Hoa on 12/22/2015.
  */
-public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton.OnCheckedChangeListener {
+public class QuestionAnswerAdapter extends BaseAdapter implements AnswerRadioButton.OnCheckedChangeListener {
     private Context context;
     private TestContent test;
     private boolean showAnswer = false;
@@ -107,10 +106,10 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
         Button categoryButton = (Button)convertView.findViewById(R.id.category_button);
         TextView tvQuestion = (TextView)convertView.findViewById(R.id.question);
         RadioGroup radioGroup = (RadioGroup)convertView.findViewById(R.id.answer_group);
-        RadioButton[] radioButtons = getRadioButtons(convertView);
+        AnswerRadioButton[] radioButtons = getRadioButtons(convertView);
 
         setRadioOnChanged(radioButtons, false);
-        setRadioValue(userSelection[position], radioGroup);
+        setRadioValue(userSelection[position], radioButtons);
         setRadioTag(radioGroup, radioButtons, position);
 
         radioGroup.setEnabled(!showAnswer);
@@ -123,41 +122,40 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
         return convertView;
     }
 
-    private RadioButton[] getRadioButtons(View convertView) {
-        return new RadioButton[]{
-                    (RadioButton)convertView.findViewById(R.id.answer_a),
-                    (RadioButton)convertView.findViewById(R.id.answer_b),
-                    (RadioButton)convertView.findViewById(R.id.answer_c),
-                    (RadioButton)convertView.findViewById(R.id.answer_d)
-            };
-    }
-
-    private void setRadioValue(int i, RadioGroup radioGroup) {
-        if(i ==-1){
-            radioGroup.check(-1);
-        }else{
-            radioGroup.check(radioButtonId[i]);
+    private void setRadioValue(int selectedIndex, AnswerRadioButton[] answerRadioButtons) {
+        for (int i = 0; i < answerRadioButtons.length; i++) {
+            answerRadioButtons[i].setChecked(i == selectedIndex);
         }
     }
 
-    private void setRadioTag(RadioGroup radioGroups, RadioButton[] radioButtons, int questionId){
+    private AnswerRadioButton[] getRadioButtons(View convertView) {
+        return new AnswerRadioButton[]{
+                (AnswerRadioButton) convertView.findViewById(R.id.answer_a),
+                (AnswerRadioButton) convertView.findViewById(R.id.answer_b),
+                (AnswerRadioButton) convertView.findViewById(R.id.answer_c),
+                (AnswerRadioButton) convertView.findViewById(R.id.answer_d)
+            };
+    }
+
+    private void setRadioTag(RadioGroup radioGroups, AnswerRadioButton[] radioButtons, int questionId) {
         radioGroups.setTag(questionId);
-        for (RadioButton radioButton : radioButtons) {
+        for (AnswerRadioButton radioButton : radioButtons) {
             radioButton.setTag(questionId);
         }
     }
 
-    private void setRadioOnChanged(RadioButton[] radioButtons, boolean isSet){
-        for (RadioButton radioButton : radioButtons) {
+    private void setRadioOnChanged(AnswerRadioButton[] radioButtons, boolean isSet) {
+        for (AnswerRadioButton radioButton : radioButtons) {
             radioButton.setOnCheckedChangeListener(isSet ? this : null);
         }
     }
 
-    private void setAnswerText(RadioButton[] radioButtons,Question question){
+    private void setAnswerText(AnswerRadioButton[] radioButtons, Question question) {
         for(int i=0;i<radioButtons.length;i++){
-            RadioButton radioButton = radioButtons[i];
+            AnswerRadioButton radioButton = radioButtons[i];
             String answer = question.getAnswer(i);
             if(showAnswer){
+                radioButton.setIsCorrect(question.checkCorrectAnswer(i));
                 radioButton.setText(Html.fromHtml(QuestionHelper.convertToColor(answer,
                         question.checkCorrectAnswer(i) ? "blue" : "whit")));
             }else {
@@ -167,6 +165,8 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
             if(answer==null || answer.length()==0){
                 radioButton.setVisibility(View.GONE);
             }else{
+                radioButton.updateIcon();
+                radioButton.updateTextStyle();
                 radioButton.setVisibility(View.VISIBLE);
             }
         }
@@ -187,19 +187,20 @@ public class QuestionAnswerAdapter extends BaseAdapter implements CompoundButton
         }
     }
 
-    private void setRadioButtonEnable(RadioButton[] radioButtons){
-        for(RadioButton radioButton: radioButtons){
+    private void setRadioButtonEnable(AnswerRadioButton[] radioButtons) {
+        for (AnswerRadioButton radioButton : radioButtons) {
             radioButton.setEnabled(!showAnswer);
         }
     }
 
-    private void setRadioButtonShow(RadioButton[] radioButtons, Question question){
+    private void setRadioButtonShow(AnswerRadioButton[] radioButtons, Question question) {
         for(int i=0;i<radioButtons.length;i++){
             ViewUtils.setViewVisibility(radioButtons[i], question.getAnswer(i).length() > 0);
         }
     }
 
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+    @Override
+    public void onCheckedChanged(AnswerRadioButton buttonView, boolean isChecked) {
         if(buttonView.isChecked()){
             int questionIndex = Integer.decode(buttonView.getTag().toString());
             int viewId = buttonView.getId();
