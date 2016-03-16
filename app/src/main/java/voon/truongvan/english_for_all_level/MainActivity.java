@@ -12,6 +12,7 @@ import voon.truongvan.english_for_all_level.control.BaseActivity;
 import voon.truongvan.english_for_all_level.controller.AssetDataController;
 import voon.truongvan.english_for_all_level.controller.HttpDownloadController;
 import voon.truongvan.english_for_all_level.controller.OnlineDataController;
+import voon.truongvan.english_for_all_level.util.RateDialogCreator;
 import voon.truongvan.english_for_all_level.util.Utils;
 
 public class MainActivity extends BaseActivity implements HttpDownloadController.IDownload, AppConstant {
@@ -114,5 +115,11 @@ public class MainActivity extends BaseActivity implements HttpDownloadController
 
     public void onDestroy() {
         super.onDestroy();
+    }
+
+    @Override
+    public void onResume() {
+        RateDialogCreator.resume(this);
+        super.onResume();
     }
 }
