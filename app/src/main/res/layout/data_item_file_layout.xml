@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/file_data_item_select_layout"
     style="@style/RowItemStyle"
-    android:background="@drawable/list_view_file_item_background"
+    android:background="@drawable/listview_file_item_bg"
     >
     <TextView
         android:id="@+id/button_main_menu"
@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/text_badge"
-        android:layout_toRightOf="@+id/row_icon"
         android:gravity="center"
         android:text="Button"
         android:textColor="@color/white"
