@@ -52,6 +52,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
         appTitle.setText("");
         listView = (ListView) findViewById(R.id.question_list_view);
         submitButton = (EffectImageView) findViewById(R.id.submit_button);
+        submitButton.setActivated(false);
 
         Bundle bundle = getIntent().getExtras();
         currentFileName = bundle.getString(AppConstant.MESSAGE_FILE_NAME);
@@ -124,8 +125,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
                     .setPositiveButton(R.string.dialog_result_button, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             questionAnswerAdapter.setShowAnswer(true);
-                            //submitButton.setText(R.string.finish);
-
+                            submitButton.setActivated(true);
                         }
                     });
             AlertDialog alertDialog = alertDialogBuilder.create();
@@ -197,7 +197,7 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
 
     public void onDownloadFail(String message) {
         closeLoadingDialog();
-        //submitButton.setText(R.string.finish);
+        submitButton.setActivated(true);
         showMessage(R.string.download_fail_message);
     }
 
