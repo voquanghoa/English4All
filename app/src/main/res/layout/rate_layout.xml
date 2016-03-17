@@ -35,33 +35,23 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:weightSum="2">
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
-
             <voon.truongvan.english_for_all_level.control.EffectImageView
                 android:id="@+id/bt_rate_yes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
+                style="@style/RateButtonStyle"
                 android:src="@drawable/rate_dialog_yes" />
-
             <voon.truongvan.english_for_all_level.control.EffectImageView
                 android:id="@+id/bt_rate_no"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/RateButtonStyle"
                 android:layout_margin="5dp"
-                android:adjustViewBounds="true"
                 android:src="@drawable/rate_dialog_no" />
-
             <voon.truongvan.english_for_all_level.control.EffectImageView
                 android:id="@+id/bt_rate_later"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
+                style="@style/RateButtonStyle"
                 android:src="@drawable/rate_dialog_later" />
         </LinearLayout>
     </LinearLayout>

@@ -14,6 +14,6 @@
     <color name="answer_normal_color">#ffffff</color>
 
     <color name="list_view_file_background_color">#6567e6c4</color>
-    <color name="radio_button_color">#60cf20</color>
-    <color name="radio_button_pressed_color">#00ff00</color>
+    <color name="radio_button_color">#12426e</color>
+    <color name="radio_button_pressed_color">#1e598f</color>
 </resources>

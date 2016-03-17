@@ -10,9 +10,5 @@
     <TextView
         android:id="@+id/button_main_menu"
         style="@style/FolderItemText"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerVertical="true"
-        android:gravity="center"
         />
 </RelativeLayout>

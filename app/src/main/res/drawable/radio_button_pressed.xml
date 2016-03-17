@@ -7,7 +7,7 @@
                 android:height="@dimen/radio_button_size" />
             <stroke
                 android:width="@dimen/radio_button_border_size"
-                android:color="@color/radio_button_color" />
+                android:color="#fff" />
         </shape>
     </item>
     <item
