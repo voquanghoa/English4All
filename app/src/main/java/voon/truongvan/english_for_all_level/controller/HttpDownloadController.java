@@ -12,16 +12,12 @@ import voon.truongvan.english_for_all_level.util.Utils;
  * Created by Vo Quang Hoa on 12/21/2015.
  */
 public class HttpDownloadController implements AppConstant{
-    public interface IDownload{
-        void onDownloadDone(String url, byte[] data);
-        void onDownloadFail(String message);
-        void onDownloadProgress(int done, int total);
-    }
-
+    private static HttpDownloadController instance;
     private boolean isDownloading;
     private boolean isStopped;
 
-    private static HttpDownloadController instance;
+    private HttpDownloadController() {
+    }
 
     public synchronized static HttpDownloadController getInstance(){
         if(instance==null){
@@ -29,8 +25,6 @@ public class HttpDownloadController implements AppConstant{
         }
         return instance;
     }
-
-    private HttpDownloadController(){}
 
     public void startDownload(final String url,final IDownload downloadHandler){
         new Thread(new Runnable() {
@@ -47,6 +41,7 @@ public class HttpDownloadController implements AppConstant{
     }
 
     private void downloadFile(String downloadUrl, IDownload downloadHandler) {
+        downloadUrl = downloadUrl.replaceAll(" ", "%20");
         isDownloading = true;
         isStopped = false;
         try {
@@ -62,7 +57,8 @@ public class HttpDownloadController implements AppConstant{
                 return;
             }
 
-            if (httpConn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+            int httpCode = httpConn.getResponseCode();
+            if (httpCode == HttpURLConnection.HTTP_OK) {
                 InputStream inputStream = httpConn.getInputStream();
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 int totalSize = httpConn.getContentLength();
@@ -87,8 +83,8 @@ public class HttpDownloadController implements AppConstant{
                 byteArrayOutputStream.close();
                 downloadHandler.onDownloadDone(downloadUrl, byteArrayOutputStream.toByteArray());
             }else{
+                Utils.Log(new Exception("Can not download file " + downloadUrl + httpCode));
                 downloadHandler.onDownloadFail("Download error. Can not download this file.");
-                Utils.Log(new Exception("Can not download file " + downloadUrl));
             }
         } catch (Exception e) {
             downloadHandler.onDownloadFail(e.getMessage());
@@ -96,6 +92,14 @@ public class HttpDownloadController implements AppConstant{
         } finally {
 
         }
+    }
+
+    public interface IDownload {
+        void onDownloadDone(String url, byte[] data);
+
+        void onDownloadFail(String message);
+
+        void onDownloadProgress(int done, int total);
     }
 }
 

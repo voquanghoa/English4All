@@ -197,7 +197,12 @@ public class QuestionActivityBase extends BaseActivity implements Runnable, Http
 
     public void onDownloadFail(String message) {
         closeLoadingDialog();
-        submitButton.setActivated(true);
+        runOnUiThread(new Runnable() {
+            public void run() {
+                submitButton.setActivated(true);
+            }
+        });
+
         showMessage(R.string.download_fail_message);
     }
 

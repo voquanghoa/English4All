@@ -47,7 +47,8 @@
             <voon.truongvan.english_for_all_level.control.EffectImageView
                 android:id="@+id/bt_rate_no"
                 style="@style/RateButtonStyle"
-                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:src="@drawable/rate_dialog_no" />
             <voon.truongvan.english_for_all_level.control.EffectImageView
                 android:id="@+id/bt_rate_later"
